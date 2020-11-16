@@ -1,0 +1,82 @@
+@include print {
+  @page {
+    margin: 1cm;
+    overflow: visible;
+  }
+  html, body, main {
+    overflow: visible;
+    float: left;
+    height: 150%;
+  }
+  #omn-container {
+    display: none;
+  }
+  .title-container {
+    .picture {
+      height: 10*$vr;
+    }
+    .box.text-center {
+      margin: 0;
+      padding: 10*$vr 0 0 4*$hr;
+    }
+    h1 {
+      border-bottom: 1px solid $gray-second;
+      display: inline-block;
+      float: left;
+      padding-bottom: $vr;
+      text-align: left;
+      font-size: 28px;
+    }
+    &::after {
+      background: url(img/logo-white.svg) no-repeat transparent !important;
+      background-size: contain !important;
+      background-position: 4*$vr 0px !important;
+      position: absolute;
+      height: 3*$vr;
+      margin: 26px 0;
+      overflow: hidden;
+      text-indent: -9999px;
+      top: 0;
+      width: 100%;
+      -webkit-print-color-adjust: exact;
+    }
+  }
+  .container:before, .nav-tabs, .btn, footer {
+    display: none;
+  }
+  .tab-content>.tab-pane, .collapse {
+    display: block;
+    opacity: 1;
+    height: auto;
+  }
+  .panel-group .panel-default {
+    .panel-heading {
+      border: 1px solid $gray-second !important;
+      border-bottom-width: 0px !important;
+      border-radius: 8px 8px 0 0 !important;
+      margin-top: 3*$vr;
+      padding-top: $vr !important;
+      h2 {
+        font-size: 18px;
+        padding: $vr 0 0;
+      }
+    }
+    .panel-collapse {
+      height: auto !important;
+      .panel-body {
+        padding: 3*$vr 10px;
+        border-color: $gray-second !important;
+        h3 {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  ul {
+    padding-left: 20px;
+    li {
+      list-style: square;
+      padding-left: 0;
+    }
+  }
+}

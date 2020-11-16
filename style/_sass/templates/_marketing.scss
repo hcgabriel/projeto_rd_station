@@ -1,0 +1,525 @@
+#rdsm-hero_header {
+  padding: ($vr * 15) 0 ($vr * 8);
+  background-image: url(img/home-hero-marketing-bg.svg);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: contain;
+  background-attachment: fixed;
+  box-shadow: inset 0px -80px 100px #ffffff;
+  @include desktop {
+    padding: ($vr * 20) 0 0;
+    .btn + .btn {
+      margin-left: 16px;
+    }
+  }
+  h1 {
+    font-weight: bold;
+  }
+  .btn-pres-video {
+    color: $brand-first;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 24px 0;
+    display: block;
+    cursor: pointer;
+    &:hover, &:focus, &:active {
+      text-decoration: none;
+      color: $brand-first;
+    }
+    [class*="icon-"] {
+      color: $brand-first;
+      font-size: 32px;
+      display: inline-block;
+      position: relative;
+      top: 8px;
+      margin-right: 8px;
+    }
+  }
+  @include mobile {
+    background-image: url(img/home-hero-marketing-bg-mobile.svg);
+    [class*="col"] {
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+    h1 {
+      font-size: 32px;
+    }
+    .rd_marketing_logo {
+      max-width: 100%;
+    }
+    .btn-pres-video {
+      line-height: 24px;
+      padding-left: 40px;
+      position: relative;
+      margin: 24px 0;
+      [class*="icon-"] {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+      }
+    }
+  }
+  #block-struture-svg-wrapper {
+    width: 560px;
+    margin-left: -40px;
+    @include mobile {
+      display: none;
+    }
+  }
+}
+
+#rdsm-hero_header.b-header {
+  .container:before {
+    content: none;
+  }
+  .marketing-video-bg {
+    width: 50vw;
+    height: 100%;
+    background-image: url(img/mkt-hero-video.png);
+    position: absolute;
+    background-position: right center;
+    background-repeat: no-repeat;
+    right: 0;
+    min-height: 400px;
+  }
+  h1 {
+    strong {
+      box-shadow: inset 0 -24px 0px #e6edf3;
+    }
+  }
+  p.lead {
+    margin: 32px 0 32px;
+    position: relative;
+  }
+  .btn.text-left {
+    text-decoration: underline;
+  }
+  .btn-video {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: calc(25% - 48px) calc(50% - 64px);
+    cursor: pointer !important;
+    .st2 {
+      transition: all .2s;
+      fill: rgba(0,0,0,0.5);
+      opacity: 1;
+    }
+    &:hover, &:focus, &:active {
+      .st2 {
+        fill: #F54959;
+        opacity: 1;
+      }
+    }
+  }
+  @include mobile {
+    .col-md-6:first-child {
+      margin: -32px 0 40px;
+    }
+    .marketing-video-bg {
+      width: 100%;
+      top: 0;
+      min-height: 100%;
+      background-size: cover;
+    }
+    .btn-video {
+      padding: calc(25% - 36px) calc(50% - 48px) !important;
+    }
+  }
+  @include desktop {
+    h1 {
+      font-size: 32px;
+      line-height: 40px;
+      margin: 16px 0 8px;
+    }
+    p.lead {
+      margin: 24px 0;
+    }
+    .btn.text-left {
+      text-align: left;
+    }
+  }
+}
+
+#rdsm-soft_features {
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 32px;
+  }
+  [class*="col"] {
+    img {
+      max-width: 100%;
+      border: 1px solid $gray-second;
+      border-radius: 2px;
+    }
+  }
+  @include desktop {
+    .row {
+      padding: $vr * 10;
+      display: flex;
+      [class*="col"] {
+        align-self: center;
+        img {
+          max-width: 100%;
+        }
+        &:not(.box) {
+          position: relative;
+          @include new_frame("gradient-1");
+          &:before {
+            right: 20px;
+            width: calc(720px - 40px);
+            left: inherit;
+          }
+          &[class*="push"]:before {
+            right: inherit;
+            left: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+#rdsm-social_proof, #rdscrm-social_proof {
+  padding: ($vr * 15) 0 ($vr * 10);
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 32px;
+    .big {
+      font-size: 32px;
+      line-height: 40px;
+      font-weight: 800;
+    }
+  }
+  h2 + a {
+    max-width: 280px;
+  }
+  .box + a {
+    display: block;
+  }
+  @include desktop {
+    .box + a {
+      margin: 8px 0 0 112px;
+    }
+    .box-white {
+      margin-top: -56px;
+    }
+  }
+  .video_thumbnail {
+    padding: 0;
+    margin-top: 32px;
+    img {
+      width: 133%;
+      position: relative;
+      z-index: -3;
+    }
+    .btn-video {
+      width: 133%;
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      text-align: center;
+      height: 100%;
+      color: white;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-shadow: 0px 1px 3px rgba(0,0,0,0.3);
+      padding: calc(50% - 80px) 0;
+      cursor: pointer;
+      &:hover, &:focus, &:active {
+        text-decoration: none;
+      }
+      span {
+        font-size: 60px;
+      }
+    }
+  }
+  @include mobile {
+    [class*="col"] {
+      padding-left: 32px;
+      padding-right: 32px;
+      .box {
+        margin: 16px -16px;
+      }
+      .box + a {
+        text-align: center;
+      }
+    }
+    .video_thumbnail {
+      padding: 0;
+      margin: 32px 0;
+      img {
+        width: 100%;
+        position: relative;
+        z-index: -3;
+      }
+      .btn-video {
+        width: 100%;
+        padding: calc(25% - 44px) 0;
+        span {
+          font-size: 80px;
+        }
+      }
+    }
+  }
+}
+
+#rdsm-main_cta, #rdsm-wpp_cta {
+  .container {
+    @include new_frame("gradient-1");
+    @include bright;
+    &:before {
+      top: 0;
+      height: 100%;
+    }
+  }
+  h2 {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: bold;
+  }
+}
+#rdsm-wpp_cta {
+  padding: 24px 0 0;
+}
+
+#rdsm-feature_list {
+  .container {
+    padding: ($vr * 8) 0;
+    @include new_frame();
+    &:before {
+      top: 0;
+      height: 100%;
+    }
+  }
+  h2 {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: bold;
+  }
+  .btn {
+    margin-top: 0;
+  }
+  .btn + a {
+    margin: 24px 24px 0;
+  }
+  .row {
+    padding: ($vr * 4) 0;
+  }
+  .rdsm_feature {
+    h3 {
+      font-weight: bold;
+    }
+  }
+  [class*="feature_ico-"] {
+    padding: 12px 0 12px 56px;
+    background-repeat: no-repeat;
+    background-position: left 6px;
+    background-size: 44px;
+    background: none !important;
+    padding: 12px 0 6px;
+  }
+  .feature_ico-01 { background-image: url(img/icons/feature_icon-social_media.svg); }
+  .feature_ico-02 { background-image: url(img/icons/feature_icon-fb_ads.svg); }
+  .feature_ico-03 { background-image: url(img/icons/feature_icon-seo.svg); }
+  .feature_ico-04 { background-image: url(img/icons/feature_icon-landing_pages.svg); }
+  .feature_ico-05 { background-image: url(img/icons/feature_icon-email_mkt.svg); }
+  .feature_ico-06 { background-image: url(img/icons/feature_icon-ab_test.svg); }
+  .feature_ico-07 { background-image: url(img/icons/feature_icon-automation.svg); }
+  .feature_ico-08 { background-image: url(img/icons/feature_icon-lead_monitoring.svg); }
+  .feature_ico-09 { background-image: url(img/icons/feature_icon-lead_scoring.svg); }
+  .feature_ico-10 { background-image: url(img/icons/feature_icon-success_plans.svg); }
+  .feature_ico-11 { background-image: url(img/icons/feature_icon-analysis.svg); }
+  .feature_ico-12 { background-image: url(img/icons/feature_icon-bi.svg); }
+  @include mobile {
+    [class*="col"] {
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+    h2 {
+      font-size: 24px;
+      line-height: 32px;
+    }
+    .btn + a {
+      display: block;
+      text-align: center;
+    }
+    .row {
+      padding: 0;
+      &:first-child {
+        margin-bottom: 40px;
+      }
+    }
+    [class*="feature_ico-"] {
+      padding: 56px 0 0px 0px;
+      font-size: 20px;
+    }
+  }
+}
+
+#rdsm-platform_value {
+  .container {
+    @include new_frame;
+  }
+  h2 {
+    font-weight: bold;
+  }
+  p {
+    display: inline-block;
+    max-width: 800px;
+  }
+  @include mobile {
+    h2 {
+      font-size: 24px;
+    }
+  }
+}
+
+#rdsm-plans_overview {
+  [class*="col"] img {
+    width: 100%;
+    max-width: 80px;
+    margin-bottom: 16px;
+  }
+  .a_box {
+    padding: 24px 48px 48px;
+    .m_mkt_plan_box-tag {
+      display: block;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    h3 {
+      margin-top: 16px;
+      color: $black;
+    }
+    .btn {
+      width: 100%;
+    }
+  }
+  .m_mkt_plan_box-price_box {
+    background-color: $gray-first;
+    display: block;
+    margin: 24px -48px -48px;
+    padding: 24px 24px;
+    .m_mkt_plan_box-price {
+      line-height: 16px;
+    }
+  }
+  .a_container{
+    &.-gradient_frame{
+      &:before{
+        bottom: 64px;
+        height: auto;
+      }
+    }
+  }
+  @include desktop {
+    .flex {
+      justify-content: center;
+    }
+  }
+}
+
+#rdsm-integrations{
+  padding-top: 80px;
+  .flex {
+    align-items: center;
+  }
+  [class*="col"] img {
+    max-width: 100%;
+  }
+  .a_container{
+    &.-gray_frame{
+      &:before{
+        bottom: 40px;
+        height: auto;
+        top: 40px;
+      }
+    }
+  }
+  .row{
+    .a_box{
+      height: 100%;
+    }
+    [class*="col"] {
+      &:first-child {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  p{
+    font-size: 16px;
+    line-height: 24px;
+  }
+  ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 30px 15px;
+    justify-items: stretch;
+    align-items: stretch;
+    margin-bottom: 16px;
+    li{
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      img{
+        height: 32px;
+        object-fit: contain;
+        width: 32px;
+      }
+      span{
+        display: inline-block;
+        font-size: 14px;
+        line-height: 16px;
+        margin-top: 16px;
+        width: 100%;
+      }
+      &:before{
+        display: none;
+      }
+    }
+    &.crm_integration_topics {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px 32px;
+      margin: 24px 0 48px;
+      li {
+        img {
+          height: 80px;
+          width: 80px;
+        }
+        span {
+          margin-top: 0;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+  @include desktop {
+    .row{
+      [class*="col"] {
+        &:first-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    ul{
+      grid-gap: 20px 15px;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      &.crm_integration_topics {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+      li{
+        img{
+          height: 42px;
+          width: 42px;
+        }
+      }
+    }
+    .btn + .btn {
+      margin-left: 16px;
+    }
+  }
+}

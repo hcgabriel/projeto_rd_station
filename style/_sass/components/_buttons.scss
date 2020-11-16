@@ -1,0 +1,81 @@
+.btn {
+  @extend .strong;
+  border: 0;
+  border-radius: 2px;
+  font-size: 13px;
+  line-height: 3*$vr;
+  margin: 2*$vr 0 0;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  transition: background 0.4s, border 0.4s, color 0.4s;
+  white-space: normal;
+  width: 100%;
+  &.btn-lg {
+    font-size: 16px;
+    padding: (2*$vr)-6 (2*$vr);
+  }
+  @include desktop {
+    width: auto;
+  }
+}
+
+@mixin button-color($color){
+  background-color: $color;
+  border: 2px solid $color;
+  color: $white;
+  &.btn-outline {
+    background-color: transparent;
+    color: $color;
+    &:hover, &:focus, &:active {
+      background-color: transparent;
+      border-color: lighten($color, 10%);
+      color: lighten($color, 10%);
+    }
+  }
+  &.btn-clear {
+    background-color: transparent;
+    border-color: transparent;
+    color: $color;
+    text-decoration: underline;
+    &:hover, &:focus, &:active {
+      background-color: transparent;
+      border-color: transparent;
+      color: lighten($color, 10%);
+    }
+  }
+  &:hover, &:focus, &:active {
+    background-color: lighten($color, 10%);
+    border-color: lighten($color, 10%);
+    color: $white;
+  }
+}
+
+.btn-default {
+  @include button-color($brand-first);
+}
+.btn-primary {
+  @include button-color($brand-third);
+}
+.btn-purple {
+  @include button-color($new-complement-first);
+}
+.btn-light-blue {
+  @include button-color($new-light-blue);
+}
+.btn-dark-blue {
+  @include button-color($new-dark-blue);
+}
+.btn-secondary {
+  @include button-color($brand-second);
+}
+.btn-highlight {
+  @include button-color($highlight);
+}
+.btn-white {
+  @include button-color($white);
+}
+
+
+.btn-full-width {
+  width: 100%;
+}

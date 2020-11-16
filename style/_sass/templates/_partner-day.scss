@@ -1,0 +1,28 @@
+.page-template-page-partner-day, .page-template-page-partner-day-benefits {
+  h1 {
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: 700;
+  }
+  [class*="col"] {
+    @include mobile(){
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+  }
+  .affix-top {
+    background-color: transparent !important;
+    transition: background .4s;
+    .content-logo {
+      opacity: 0;
+      transition: opacity .4s;
+    }
+    &.open {
+      background-color: $brand-first !important;
+    }
+  }
+}
+
+.page-template-page-partner-day-benefits {
+  display: none;
+}

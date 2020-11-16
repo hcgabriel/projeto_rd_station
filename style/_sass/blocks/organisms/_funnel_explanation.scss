@@ -1,0 +1,22 @@
+.o {
+  &_funnel_explanation {
+    &-image {
+      margin-top: 40px;
+      text-align: center;
+      img {
+        @include mobile() {
+          max-width: 320px;
+        }
+      }
+    }
+    &-stage_title {
+      font-size: 24px;
+      line-height: 32px;
+      color: $white;
+      font-weight: 700;
+      margin: 56px 0 0 0 !important;
+      @include desktop(){
+      }
+    }
+  }
+}

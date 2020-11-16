@@ -1,0 +1,31 @@
+.content-logo {
+  overflow: hidden;
+  text-indent: -9999px;
+  min-height: 24px;
+  display: block;
+  &--partner-day {
+    background-image: url(img/logos/rd-station_partner-day.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 48px;
+    &--white {
+      background-image: url(img/logos/rd-station_partner-day--white.svg);
+    }
+  }
+  &--rdsm {
+    background-image: url(img/logos/rd-station-marketing.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 48px;
+    min-width: 246px;
+    &--white {
+      background-image: url(img/logos/rd-station-marketing-white.svg);
+    }
+  }
+  &--on-header {
+    width: 216px;
+  }
+}
+.-white_bg.affix-top .content-logo--rdsm {
+  opacity: 0;
+}

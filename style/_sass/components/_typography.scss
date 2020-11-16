@@ -1,0 +1,354 @@
+// Improves text rendering:
+* {
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  font-family: $font-family-base;
+  font-display: auto; 
+}
+
+// Selected text style:
+::-moz-selection {
+  background: $brand-first;
+  color: $white;
+}
+::selection {
+  background: $brand-first;
+  color: $white;
+}
+
+// Color for texts when inside a dark background container
+@mixin bright {
+  .heading, h5, h6, p, li, ol li:before, a:not(.btn), span {
+    color: $white;
+  }
+  .link {
+    color: $white;
+    box-shadow: inset 0px -1px 0px $white;
+    &:hover, &:focus, &:active {
+      color: $brand-second;
+      box-shadow: inset 0px -1px 0px $brand-second;
+    }
+  }
+}
+
+.bright {
+  @include bright;
+}
+
+// =================================
+// BASIC STYLES
+// =================================
+
+// Bold, bolder and italic:
+strong, .strong {
+  font-weight: 700;
+}
+.stronger {
+  font-weight: 800;
+}
+.lighter {
+  font-weight: 300;
+}
+em, .em {
+  font-style: italic;
+}
+
+u, .u {
+  text-decoration: none;
+  border-bottom: 2px dotted darken($gray-second, 10%);
+}
+
+// Body text:
+.type {
+  font-family: $font-family-base;
+  font-size: 2*$vr;
+  line-height: 3*$vr;
+  margin: 0 0 2*$vr;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.small {
+  @extend .type;
+  font-size: 1.5*$vr;
+}
+
+// Heading text:
+.heading {
+  color: $brand-third;
+  font-family: $font-family-base;
+  margin: 4*$vr 0 2*$vr;
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+  .heading_xs {
+    @extend .heading;
+    font-size: 18px;
+    line-height: 3*$vr;
+  }
+  .heading_s {
+    @extend .heading;
+    font-size: 3*$vr;
+    line-height: 4*$vr;
+  }
+  .heading_m {
+    @extend .heading;
+    font-size: 4*$vr;
+    line-height: 5*$vr;
+  }
+  .heading_l {
+    @extend .heading;
+    font-size: 5*$vr;
+    line-height: 6*$vr;
+  }
+
+// List item text:
+.list-item, li {
+  list-style: none;
+  padding-left: $hr*4;
+  position: relative;
+  &:before {
+    position: absolute;
+  }
+}
+
+// Sets margin to text elements:
+.elmt-margin {
+  margin-bottom: 4*$vr;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.picture-caption {
+  @include bright;
+  bottom: 2*$vr;
+  padding: 0 4*$vr 3*$vr;
+  position: absolute;
+  text-align: right;
+  width: 100%;
+  p {
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+  @include desktop {
+    bottom: 6*$vr;
+    padding: 0 6*$vr 3*$vr;
+  }
+}
+
+// =================================
+// TYPE ELEMENTS STYLES
+// =================================
+
+// Link style:
+.link:not(.btn) {
+  color: $brand-second;
+  cursor: pointer;
+  position: relative;
+  transition: all .4s;
+  box-shadow: inset 0px -1px 0px $brand-second;
+  &:hover, &:focus, &:active {
+    text-decoration: none;
+    color: $brand-third;
+    box-shadow: inset 0px -1px 0px $brand-third;
+  }
+}
+
+// Quote style:
+.quote {
+  @extend .elmt-margin;
+  padding: 0 0 0 $hr*4;
+  position: relative;
+  font-size: initial;
+  border: 0;
+  &:before {
+    background-image: url(img/quote.svg);
+    background-repeat: no-repeat;
+    content: "";
+    height: 26px;
+    left: -$hr;
+    position: absolute;
+    top: $vr/2;
+    width: 28px;
+  }
+  footer {
+    @extend .text-right;
+    p {
+      font-size: 13px;
+      text-transform: uppercase;
+      margin-bottom: $vr/2;
+      .author { @extend .strong }
+    }
+    img.quote-company {
+      height: 10*$hr;
+      width: auto;
+      max-width: 20*$hr;
+      object-fit: contain;
+    }
+  }
+}
+
+// Applying styles to elements:
+h1 { @extend .heading_l; }
+h2 { @extend .heading_m; }
+h3 { @extend .heading_s; }
+h4 { @extend .heading_xs; }
+h5 {
+  @extend .type;
+  color: $brand-third;
+}
+h6 {
+  @extend .small;
+  @extend .strong;
+  color: $brand-third;
+}
+
+hr {
+  border-top: 2px dotted rgba($gray-second, 0.4);
+}
+
+p, li {
+  @extend .type;
+  color: $black;
+  a {
+    @extend .link;
+  }
+  .highlight {
+    @extend .heading_xs;
+  }
+}
+
+ul {
+  @extend .elmt-margin;
+  padding-left: 0;
+  li {
+    &:before {
+      background-image: url(img/li-bullet.svg);
+      background-repeat: no-repeat;
+      background-size: 10px;
+      content:"";
+      height: 24px;
+      left: 0;
+      top: 2px;
+      width: 10px;
+    }
+  }
+}
+
+ol {
+  @extend .elmt-margin;
+  padding-left: 0;
+  counter-reset: ol-counter;
+  li {
+    &:before {
+      @extend .strong;
+      color: $brand-third;
+      content: counter(ol-counter);
+	    counter-increment: ol-counter;
+      left: 0;
+    }
+  }
+}
+
+blockquote { @extend .quote; }
+
+input[type="text"], input[type="email"], input[type="number"], input[type="tel"], input[type="url"], input[type="password"], select, textarea {
+  background-color: $white;
+  border: 1px solid $gray-second;
+  border-radius: 2px;
+  box-shadow: inset 0px 2px 0px $gray-second;
+  color: $black;
+  font-size: 14px;
+  letter-spacing: 0.75px;
+  margin: 2*$vr 0 0;
+  padding: 8px 8px 8px;
+  width: 100%;
+  min-height: 40px;
+  height: 40px;
+  &:focus {
+    outline: 0;
+    box-shadow: 0px 0px 5px 1px $brand-second, inset 0 2px 0px $gray-second;
+  }
+}
+
+::-webkit-input-placeholder {
+   color: $gray-third;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+   color: $gray-third;
+}
+:-ms-input-placeholder {
+   color: $gray-third;
+}
+
+.select {
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    right: 16px;
+    top: 18px;
+    margin: auto auto -4px auto;
+    border-style: solid;
+    border-width: 8px 5px 0 5px;
+    border-color: $gray-third transparent transparent transparent;
+    pointer-events: none;
+  }
+  select {
+    cursor: pointer;
+    // Disable default styling on ff
+    -moz-appearance: none;
+    // Disable ugly ass outline on firefox
+    &:-moz-focusring {
+      color: transparent;
+      text-shadow: 0 0 0 #000;
+    }
+    // Disable default styling on webkit browsers
+    -webkit-appearance: none;
+    // Disable default arrow on IE 11+
+    &::-ms-expand {
+      display: none;
+    }
+    &:focus {
+      outline: 0;
+      box-shadow: 0px 0px 5px 1px $brand-second, inset 0 2px 0px $gray-second;
+    }
+  }
+}
+
+// IE 9 only
+@media all and (min-width:0\0) and (min-resolution:.001dpcm){
+  .select{
+    select {
+      padding-right: 0;
+    }
+
+    &:after, &:before {
+      display: none;
+    }
+  }
+}
+
+// =================================
+// GRID STYLES - MD & LG SCREENS (FLEX)
+// =================================
+
+@include desktop {
+
+  // Quote style:
+  .quote {
+    padding: 0 0 0 $hr*8;
+    &:before {
+      height: 44px;
+      width: 48px;
+    }
+  }
+
+}

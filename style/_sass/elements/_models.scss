@@ -1,0 +1,89 @@
+@mixin model-1() {
+  margin-top: 0;
+  .picture {
+    height: 30*$vr;
+  }
+  .box {
+    @include box-color($white);
+  }
+  @include desktop {
+    &:before, .picture {
+      @include frame(top, 5);
+      height: 100%;
+    }
+    .box {
+      margin-top: 24*$vr;
+    }
+  }
+}
+
+@mixin model-2($imgPos: 'right') {
+  &:before {
+    @include frame(top);
+    height: calc(100% + #{5*$vr});
+  }
+  .picture {
+    height: 30*$vr;
+  }
+  .box {
+    @include box-color($white);
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  @include desktop {
+    .box:nth-child(1) {
+      @include box-color(transparent);
+    }
+    .picture {
+      @include frame(top);
+      height: calc(100% + #{5*$vr});
+      justify-content: flex-end;
+      position: absolute;
+      img {
+        width: 50%;
+        @if $imgPos == 'right' {
+          right: 0;
+        }
+        @else {
+          left: 0;
+        }
+      }
+    }
+  }
+  @include mobile {
+    h1, h2, h3 {
+      text-align: center;
+    }
+  }
+}
+
+@mixin model-3() {
+  .picture {
+    height: 30*$vr;
+  }
+  .box {
+    @include box-color($white);
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  @include desktop {
+    .box {
+      @include box-color(transparent);
+    }
+    .picture {
+      @include frame(top);
+      height: calc(100% + #{5*$vr});
+      justify-content: flex-end;
+      position: absolute;
+      img {
+        width: 50%;
+        right: 0;
+      }
+    }
+  }
+  @include mobile {
+    h1, h2, h3 {
+      text-align: center;
+    }
+  }
+}

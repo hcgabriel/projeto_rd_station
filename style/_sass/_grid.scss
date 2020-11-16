@@ -1,0 +1,104 @@
+// =================================
+// GRID MIXINS
+// =================================
+
+@mixin vertical-padding($spacing) {
+  padding-bottom: $spacing*$vr;
+  padding-top: $spacing*$vr;
+}
+@mixin horizontal-padding($spacing) {
+  padding-left: $spacing*$hr;
+  padding-right: $spacing*$hr;
+}
+
+// MEDIA QUERIES MIXINS
+@mixin desktop {
+  @media screen and (min-width: #{$screen-md}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: #{$screen-md}) {
+    @content;
+  }
+}
+
+@mixin print {
+  @media print {
+    @content;
+  }
+}
+
+// =================================
+// GRID STYLES - MOBILE FIRST
+// =================================
+
+main {
+  overflow: hidden;
+  &>section {
+    @include desktop {
+      @include vertical-padding(5);
+    }
+    &:last-of-type {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.container, .container-fluid {
+  @include horizontal-padding(0);
+  position: relative;
+  @include desktop {
+    &+& {
+      margin-top: 5*$vr;
+    }
+  }
+}
+
+.box {
+  @include horizontal-padding(4);
+  @include vertical-padding(4);
+  margin-top: 2*$vr;
+  margin-bottom: 2*$vr;
+  @include desktop {
+    @include horizontal-padding(6);
+    @include vertical-padding(4);
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.testimonial {
+  @include horizontal-padding(0);
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+  @include desktop {
+    height: calc( 100% + 40px );
+    &.flex {
+      display: flex;
+    }
+  }
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.embed-responsive img {
+  max-width: 100%;
+  height: auto;
+}
+
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+  & > [class^="col-"],
+  & > [class*=" col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}

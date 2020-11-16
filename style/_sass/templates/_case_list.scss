@@ -1,0 +1,165 @@
+#cases-filters {
+  padding-top: 170px;
+  &:not(.spanish) .box {
+    @include box-color($white, material);
+  }
+  .case-type {
+    position: absolute;
+    clear: both;
+    overflow: hidden;
+    height: 190px;
+    top: -190px;
+    overflow: hidden;
+    width: calc(100% - 32px);
+    left: 16px;
+    p {
+      float: left;
+      padding-top: 4px;
+      width: 100%;
+      margin-right: 0;
+    }
+    .tab {
+      float: left;
+      width: 50%;
+      label {
+        background: $gray-second;
+        border: 1px solid $gray-second;
+        color: $black;
+        padding: 6*$vr 1.5*$hr 10*$vr 1.5*$hr;
+        position: relative;
+        width: 100%;
+        cursor: pointer;
+        transition: all, .4s;
+        [class*="icon-"] {
+          font-size: 36px;
+          position: absolute;
+          color: $gray-third;
+          left: calc(50% - 18px);
+          top: $vr;
+          transition: all 0.4s;
+        }
+      }
+      [type=radio] {
+        display: none;
+        &:checked ~ label {
+          background: $white;
+          border-bottom: 1px solid $white;
+          box-shadow: 0px 0px 8px rgba(153,160,170,0.2);
+          z-index: 2;
+          & ~ .content {
+            z-index: 1;
+          }
+        }
+        &:not(:checked) ~ label:hover {
+          background: $brand-first;
+          border-color: $brand-first;
+          color: $white;
+          [class*="icon-"] {
+            color: $white;
+          }
+        }
+      }
+    }
+    p {
+      font-size: 14px;
+      text-align: center;
+    }
+    .tab label {
+      text-transform: uppercase;
+      font-size: 13px;
+      line-height: 16px;
+      text-align: center;
+    }
+    @include desktop {
+      p {
+        text-align: left;
+      }
+      .tab label {
+        font-size: 14px;
+        text-align: left;
+      }
+    }
+  }
+  .filters {
+    .select {
+      padding-left: 0;
+      padding-right: 0;
+      &, & select {
+        margin-top: $vr;
+      }
+    }
+    .select:first-of-type {
+      margin-top: 0;
+    }
+  }
+  &.spanish {
+    .filters {
+      display: none;
+    }
+    .case-type {
+      height: 68px;
+      .tab {
+        margin-left: 8px;
+      }
+    }
+  }
+  @include desktop {
+    padding-top: 80px;
+    padding-bottom: 0px;
+    .case-type {
+      height: 58px;
+      top: -58px;
+      width: 100%;
+      left: 0;
+      p {
+        width: 200px;
+        margin-right: 3*$hr;
+      }
+      .tab {
+        float: left;
+        width: auto;
+        label {
+          padding: 1.5*$vr 1.5*$hr 1.5*$vr 9*$hr;
+          max-width: 40*$hr;
+          [class*="icon-"] {
+            font-size: 48px;
+            left: 1.5*$hr;
+            top: calc(50% - 23px);
+          }
+        }
+      }
+    }
+    .filters {
+      .select {
+        padding-left: $hr;
+        padding-right: $hr;
+        &:first-of-type {
+          padding-left: 0;
+        }
+        &:last-of-type {
+          padding-right: 0;
+        }
+        &, & select {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.case_list {
+  @include vertical-padding(0);
+  .case_brief {
+    margin-top: 40px;
+  }
+}
+
+.case_empty {
+  display: none;
+  padding-top: 5*$vr;
+  padding-bottom: 5*$vr;
+  [class*="icon-"] {
+    font-size: 10*$vr;
+  }
+}

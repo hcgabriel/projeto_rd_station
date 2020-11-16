@@ -1,0 +1,107 @@
+#about_us-header {
+  h1 {
+    font-size: 36px;
+    font-weight: normal;
+    margin: 0 auto;
+    max-width: 680px;
+  }
+}
+
+#about_us-info {
+  @include model-1();
+  p.lead {
+    color: $brand-third;
+  }
+}
+
+#about_us-results {
+  @include featured_numbers($background:'no', $align: left);
+  @include model-2(left);
+  h2 {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+  .result-description {
+    text-transform: none;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 16px;
+  }
+  @include desktop {
+    &:before, .picture, .box:before {
+      background-color: transparent;
+    }
+  }
+}
+
+#about_us-info_list {
+  @include model-2();
+}
+
+#about_us-testimonial {
+  @include home-testimonial();
+}
+
+#about_us-featured_video {
+  position: relative;
+  z-index: -2;
+  &>.picture {
+    height: 24*$vr;
+  }
+  .videoclic {
+    position: absolute;
+    width: 180px;
+    height: 100px;
+    color: $white;
+    text-align: center;
+    text-transform: uppercase;
+    left: calc(50% - 90px);
+    top: 40px;
+    z-index: 1;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(0,0,0,0.3);
+    cursor: pointer;
+    [class*="icon-"] {
+      font-size: 100px;
+      transition: all 0.4s;
+      display: block;
+      text-align: center;
+      width: 100%;
+      line-height: 80%;
+    }
+  }
+  @include desktop {
+    top: -30px;
+    height: 60*$vr;
+    &>.picture {
+      @include frame(top, 5);
+      height: 50*$vr;
+    }
+    .videoclic {
+      top: 160px;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+#about_us-ctas {
+  &:before {
+    @include frame(bottom);
+    height: 100%;
+  }
+  @include desktop {
+    margin-top: -240px;
+    .row {
+      .box {
+        @include box-color($white);
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        justify-content: space-around;
+      }
+    }
+  }
+}

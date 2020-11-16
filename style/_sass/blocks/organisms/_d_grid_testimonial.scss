@@ -1,0 +1,57 @@
+.o {
+    &_d_grid_testimonial {
+        margin-bottom: 80px;
+        blockquote {
+            display: grid;
+            grid-template-columns: auto 80px;
+            grid-template-rows: auto auto;
+            grid-column-gap: 16px;
+            grid-row-gap: 8px;
+            & > p {
+                grid-column-start: 1;
+                grid-column-end: 3;
+                font-size: 14px;
+                line-height: 24px;
+            }
+            footer {
+                &:before {
+                    content: none;
+                }
+                & + img {
+                    width: 80px;
+                    height: 80px;
+                }
+                p {
+                    text-transform: none;
+                    .author {
+                        display: block;
+                    }
+                }
+            }
+            @include desktop {
+                grid-template-columns: 3fr 1fr;
+                grid-template-rows: auto auto;
+                grid-column-gap: 24px;
+                & > p {
+                    grid-column-start: 1;
+                    grid-column-end: 2;
+                }
+                footer + img {
+                    grid-column-start: 2;
+                    grid-column-end: 3;
+                    grid-row-start: 1;
+                    grid-row-end: 3;
+                    justify-self: stretch;
+                    align-self: stretch;
+                    width: auto;
+                    height: auto;
+                }
+                footer p {
+                    text-transform: none;
+                    grid-column-start: 1;
+                    grid-column-end: 2;
+                }
+            }
+        }
+    }
+}

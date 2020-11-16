@@ -1,0 +1,14 @@
+.results {
+  .result-number {
+    @extend .heading_l;
+    @extend .stronger;
+    display: inline-block;
+    margin-bottom: 0;
+  }
+  .result-description {
+    @extend .small;
+    @extend .strong;
+    text-transform: uppercase;
+    display: inline-block;
+  }
+}

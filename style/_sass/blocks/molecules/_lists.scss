@@ -1,0 +1,42 @@
+.m {
+  &_styled-list{
+    li{
+      &:before{
+        content: none;
+      }
+    }
+    &.-bullet{
+      margin-left: 20px;
+      li{
+        list-style: disc;
+        padding-left: 0;
+      }
+    }
+    &.-check{
+      margin-left: 20px;
+      li{
+        list-style: none;
+        padding-left: 5px;
+        & + li{
+          margin-top: 8px;
+        }
+        &:before{
+          background: none;
+          color: $gray-third;
+          content: '¬';
+          font-size: 1.5em;
+          font-weight: bold;
+          left: -12px;
+          position: absolute;
+          transform: rotate(130deg);
+          top: 0;
+        }
+      }
+    }
+    &.-none{
+      & > li{
+        list-style: none;
+      }
+    }
+  }
+}

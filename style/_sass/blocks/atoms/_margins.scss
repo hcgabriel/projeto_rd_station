@@ -1,0 +1,46 @@
+$scale-count: 20;
+$offset-val: 8px;
+$gutter-val: 15px;
+
+.a {
+  &_margin{
+    &.-margin-0 {
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    &.-margin_left-0 {
+      margin-left: 0;
+    }
+    &.-margin_right-0 {
+      margin-right: 0;
+    }
+    &.-margin_top-0 {
+      margin-top: 0;
+    }
+    &.-margin_bottom-0 {
+      margin-bottom: 0;
+    }
+    @for $i from 1 through $scale-count {
+      &.-margin_top-#{$i} {
+        margin-top: $i * $offset-val;
+      }
+    }
+    @for $i from 1 through $scale-count {
+      &.-margin_bottom-#{$i} {
+        margin-bottom: $i * $offset-val;
+      }
+    }
+    @for $i from 1 through $scale-count {
+      &.-margin_left-#{$i} {
+        margin-left: $i * $gutter-val !important;
+      }
+    }
+    @for $i from 1 through $scale-count {
+      &.-margin_right-#{$i} {
+        margin-right: $i * $gutter-val !important;
+      }
+    }
+  }
+}

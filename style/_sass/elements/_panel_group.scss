@@ -1,0 +1,40 @@
+.panel-group {
+  margin: 5*$vr 0;
+  .panel-default {
+    border-radius: 0;
+    border: 0;
+    .panel-heading {
+      background-color: $gray-first;
+      color: $black;
+      border-radius: 0;
+      @include vertical-padding(2);
+      @include horizontal-padding(3);
+      h2 {
+        @extend .type;
+        margin-bottom: 0;
+        color: $black;
+        span {
+          font-weight: 300;
+        }
+      }
+      a, a:hover, a:focus {
+        text-decoration: none;
+      }
+      br {
+        content: "";
+      }
+      p {
+        margin: 0;
+      }
+    }
+    &>p {
+      margin: 0;
+    }
+    .panel-body {
+      border: 1px solid $gray-first;
+      border-radius: 0;
+      @include vertical-padding(3);
+      @include horizontal-padding(3);
+    }
+  }
+}

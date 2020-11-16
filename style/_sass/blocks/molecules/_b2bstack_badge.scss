@@ -1,0 +1,41 @@
+.m {
+    &_b2bstack_badge {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin-top: 24px;
+    border-top: 1px solid #ffffff30;
+    padding-top: 24px;
+    img {
+        width: 70px;
+        display: block;
+        float: left;
+        }
+    span {
+        display: block;
+        float: left;
+        width: calc(100% - 85px);
+        max-width: 280px;
+        margin-left: 15px;
+        font-size: 13px;
+        }
+    &.-marketing {
+        margin: 0 0 24px;
+        border-top: none;
+        padding-top: 16px;
+        span {
+            font-size: 16px;
+            }
+        }
+    @media screen and (min-width: 560px) {
+        img {
+            width: 96px;
+            }
+            span {
+                display: block;
+                float: left;
+                width: calc(100% - 112px);
+            }
+        }
+    }
+}

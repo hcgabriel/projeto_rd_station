@@ -1,0 +1,235 @@
+.page-template-page-affiliates{
+  h2{
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 32px;
+    margin: 0 0 16px 0;
+    & + .lead{
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.5;
+      margin: 0;
+    }
+  }
+  .select:after{
+    top: 22px;
+  }
+  .alert{
+    border: none;
+    border-radius: 3px;
+    line-height: 24px;
+    margin-top: 32px;
+    padding: 16px 15px;
+    text-align: left;
+    &.alert-danger{
+      animation: error-alert-animation 0.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 4 alternate;
+      animation-delay: .5s;
+      background: lighten($highlight, 30%);
+      color: desaturate(darken($highlight, 20), 40);
+    }
+    &.alert-success{
+      background: lighten($success, 20);
+      color: darken($success, 35);
+      max-height: 80px;
+      transition: all .5s ease-out;
+      overflow: hidden;
+      &.hidden{
+        color: lighten($success, 20);
+        display: block !important;
+        max-height: 0;
+        padding:{
+          bottom: 0;
+          top: 0;
+        }
+      }
+    }
+    &.-hidden{
+      display: none;
+    }
+  }
+}
+
+.affiliates-hero{
+  background: linear-gradient(to bottom, $brand-first 0%, $complement-first 100%);
+  font-size: 16px;
+  padding-top: 4em;
+  padding-bottom: 4em;
+  margin-top: 53px;
+  h1{
+    font-size: 2.5em;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 16px 0 0;
+  }
+  h2{
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 1em 0 .5em;
+  }
+  @include desktop {
+    background: url('img/home-hero-affiliates.png') no-repeat left top, linear-gradient(to bottom, $brand-first 0%, $complement-first 100%);
+    background-size: contain;
+    margin-top: 6em;
+    padding-top: 8em;
+    padding-bottom: 8em;
+  }
+}
+.affiliates-advantages{
+  .a_box{
+    height: 100%;
+  }
+  p{
+    font-size: 14px;
+    line-height: 24px;
+  }
+  ul{
+    li{
+      font-size: 14px;
+      line-height: 24px;
+      margin-bottom: 16px;
+      ul{
+        margin-bottom: 16px;
+        li{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+.affiliates-advantages{
+  img{
+    display: block;
+    height: 64px;
+    object-fit: contain;
+    margin: 16px 0;
+    width: 100%;
+  }
+  h3{
+    color: $black;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 0 0 1.5em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  @include desktop{
+    .a_container.-gray_frame:before{
+      bottom: 0;
+      height: auto;
+      top: 312px;
+    }
+  }
+}
+
+.affiliates-form{
+  .disclaimer{
+    line-height: 20px !important;
+  }
+  .a_box{
+    background: $white;
+    padding:{
+      bottom: 0;
+      left: 15px;
+      right: 15px;
+      top: 24px;
+    }
+  }
+  .fields{
+    align-content: flex-start;
+    align-items: baseline;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin:{
+      bottom: 0;
+      left: -15px;
+      right: -15px;
+      top: 48px;
+    }
+    .complementary-group{
+      max-height: 72px;
+      margin-top: 16px;
+      overflow: hidden;
+      transition: all .2s ease-out;
+      &.-hidden{
+        margin: 0;
+        max-height: 0;
+      }
+    }
+    .control-group{
+      margin: 0 15px 24px;
+      width: 100%;
+      label{
+        margin: 0;
+        line-height: 24px;
+      }
+      input[type="text"], input[type="email"], input[type="number"], input[type="tel"], input[type="url"], input[type="password"], select, textarea {
+        margin: 7px 0 0;
+      }
+    }
+    & +.checkbox{
+      padding: 0 5px;
+    }
+  }
+  .a_container.-gradient_frame{
+    &:before{
+      background: url('img/background/bg-affiliates.png') no-repeat top center, linear-gradient(170deg, $brand-first 22%, $complement-first 100%);
+      background-blend-mode: multiply, normal;
+      background-size: contain;
+      height: auto;
+      bottom: 160px;
+      top: 0;
+    }
+  }
+  @include desktop {
+    .a_box{
+      background: $white;
+      margin-top: 160px;
+      padding:{
+        bottom: 0;
+        left: calc(16.6666667% + 15px);
+        right: calc(16.6666667% + 15px);
+        top: 48px;
+      }
+    }
+    .fields{
+      .control-group{
+        width: calc(50% - 30px);
+      }
+    }
+  }
+}
+
+.affiliates-eligible{
+  img{
+    height: 208px;
+    object-fit: cover;
+    object-position: top center;
+    width: 100%;
+  }
+  p{
+    background: $white;
+    font-size: 14px;
+    padding: 24px 30px;
+    position: relative;
+    line-height: 24px;
+    margin: -64px 15px 0;
+  }
+  @include desktop {
+    p{
+      margin: -64px 0 0 60px;
+    }
+  }
+}
+
+@keyframes error-alert-animation{
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}

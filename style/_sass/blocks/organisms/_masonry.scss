@@ -1,0 +1,15 @@
+.o {
+  &_masonry {
+    @include desktop() {
+      column-count: 2;
+      column-gap: 48px;
+    }
+    padding-top: 64px;
+    &-brick {
+      margin-bottom: 48px;
+      -webkit-column-break-inside: avoid;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+  }
+}

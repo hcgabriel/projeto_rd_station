@@ -1,0 +1,23 @@
+.demonstration_content {
+  .container {
+    &:before {
+      @include frame(top, -5);
+      height: 100*$vr;
+    }
+    .embed-responsive {
+      padding-bottom: 46.1%;
+    }
+  }
+  @include desktop {
+    .container {
+      .btn + .btn {
+        margin-left: 16px;
+      }
+    }
+  }
+  @include mobile {
+    .container:before {
+      content: none;
+    }
+  }
+}

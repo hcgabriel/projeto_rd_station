@@ -1,0 +1,572 @@
+.home_hero_header {
+  padding-top: 0;
+  position: relative;
+}
+
+.hero_header {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  .fixcontainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip: rect(0, auto, auto, 0);
+    background-image: url(img/background/bg-home-video.png);
+    background-size: cover;
+    background-position: center;
+    video {
+      position: fixed;
+    }
+  }
+}
+
+#features-carousel ol li.new-feature:before {
+  content: "Nova";
+  position: absolute;
+  font-size: 11px;
+  background: #f45567;
+  color: #fff;
+  padding: 0px 6px;
+  top: -3px;
+  left: calc( 50% - 30px );
+  font-weight: bold;
+  margin-left: 8px;
+  display: block;
+}
+#features-carousel ol li.new-feature-es:before {
+  content: "Nueva";
+  left: calc( 50% - 35px );
+}
+
+.new-feature-label {
+  font-size: 11px;
+  background: #f45567;
+  color: #fff;
+  padding: 0px 6px;
+  top: -3px;
+  display: inline-block;
+  font-weight: bold;
+  position: relative;
+  margin-left: 8px;
+}
+
+.home_hero_header_content {
+  @include bright;
+  top: 0;
+  padding-top: 4*$vr;
+  .cta-area {
+    text-align: center;
+    padding-bottom: 5*$vr;
+    .btn {
+      width: 100%;
+    }
+    .btn-outline, .btn-default {
+      margin: 0.5*$vr 0;
+    }
+    .btn-lg {
+      margin: 0 0 $vr;
+    }
+    p {
+      margin: 2*$vr 0 $vr;
+    }
+  }
+  h1 {
+    @extend .heading_m;
+    padding: 8*$vr 0;
+  }
+  h2 {
+    @extend .heading_s;
+    @extend .strong;
+    padding-bottom: 0.5*$vr;
+    margin: 0;
+  }
+  ul {
+    @include desktop {
+      padding-right: 48px;
+    }
+    li {
+      padding-left: 0;
+      &:before {
+        content: none;
+      }
+    }
+  }
+  @include desktop {
+    padding-top: 10*$vr;
+    .cta-area {
+      margin-top: 20*$vr;
+    }
+  }
+}
+
+#sec-home-discover-test {
+  padding-top: 8*$vr;
+  padding-bottom: 0;
+}
+
+#home-discover-cta {
+  .picture {
+    height: 40*$vr;
+    margin-left: -2*$hr;
+    margin-right: -2*$hr;
+  }
+  .box {
+    @include box-color($brand-first);
+    @include bright;
+    &:before {
+      width: 100%;
+      left: 0;
+    }
+  }
+  input, .btn {
+    width: 100%;
+    margin: 0 0 2*$vr;
+    text-align: center;
+  }
+  text-align: center;
+  h1 {
+    @extend .heading_s;
+    @extend .strong;
+  }
+  @include desktop {
+    position: absolute;
+    z-index: 2;
+    .picture {
+      margin-left: inherit;
+      margin-right: inherit;
+    }
+  }
+}
+
+#home-discover-free-test {
+  @include horizontal-padding(0);
+  @include mobile {
+    text-align: center;
+  }
+  .box {
+    position: relative;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    &:not(:first-of-type):before {
+      @include frame(top, 5);
+      height: 100%;
+    }
+    [class*="col-"] {
+      @include horizontal-padding(0);
+    }
+  }
+  .box:nth-child(3):before {
+    background-color: #eff2f6;
+  }
+  h1 {
+    @extend .heading_m;
+  }
+}
+
+#home-publication-quotes {
+  .box {
+    @include box-color($white);
+  }
+  &:before {
+    @include frame(top);
+    height: 100%;
+  }
+  @include desktop {
+    &:before {
+      height: calc(100% - #{10*$vr});
+    }
+  }
+}
+
+#home-ceo-quote {
+  .box {
+    @include box-color($brand-first);
+  }
+  @include bright;
+  @include desktop {
+    &:before, .picture {
+      @include frame(top, 5);
+      height: 100%;
+    }
+    .box:before {
+      background-color: transparent;
+    }
+  }
+}
+
+#home-reasons-to-test {
+  &:before {
+    @include frame(top);
+    height: calc(100% + #{5*$vr});
+  }
+  .picture {
+    height: 30*$vr;
+  }
+  .box {
+    @include box-color($white);
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  @include desktop {
+    .box:nth-child(1) {
+      @include box-color(transparent);
+    }
+    .picture {
+      @include frame(top);
+      height: calc(100% + #{5*$vr});
+      justify-content: flex-end;
+      position: absolute;
+      img {
+        width: 50%;
+      }
+    }
+  }
+  @include mobile {
+    h1 {
+      text-align: center;
+    }
+  }
+}
+
+#home-test-testimonial {
+  @include home-testimonial;
+  &:before {
+    @include frame(bottom);
+    height: 100%;
+  }
+  @include desktop {
+    &:before {
+      height: calc(100% + #{5*$vr});
+    }
+  }
+}
+
+#home-feat-case {
+  .picture {
+    @include frame(top);
+    height: calc(100% - #{15*$vr});
+    position: absolute;
+    top: 15*$vr;
+  }
+  .box:nth-child(1) {
+    @include box-color($white);
+  }
+  .box:nth-child(3) {
+    @include bright;
+    text-align: center;
+    &>img {
+      max-width: 100%;
+    }
+  }
+  h2 {
+    @extend .heading_s;
+    margin: 2*$vr 0;
+  }
+  @include desktop {
+    &:before, .picture {
+      @include frame(top, 20);
+      height: calc(100% - #{15*$vr});
+    }
+    .box:nth-child(3) {
+      @include bright;
+      text-align: left;
+    }
+    .results {
+      [class*="col-"]:first-of-type {
+        padding-left: 0;
+      }
+      [class*="col-"]:last-of-type {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+#home-more-cases {
+  margin-top: 0;
+  &:before {
+    @include frame(top, 5);
+    height: 100%;
+  }
+}
+
+#home-product-features {
+  &:before {
+    @include frame(bottom, 20);
+    height: 50%;
+  }
+  .carousel-inner {
+    @include box-color($white, material);
+    z-index: 1;
+    margin: 0 2*$vr;
+    width: calc(100% - #{4*$vr});
+    .item {
+      @include horizontal-padding(2);
+      .row [class*="col"]:first-child {
+        @include vertical-padding(2);
+        @include horizontal-padding(0);
+        .feature-img {
+          padding-top: 16px;
+          position: relative;
+          img {
+            width: 100%;
+          }
+        }
+      }
+      .box {
+        padding: 0px;
+        text-align: center;
+        .btn {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .carousel-indicators {
+    display: none;
+  }
+  .carousel-control {
+    background: transparent;
+    width: 36px;
+    height: 60px;
+    top: 120px;
+    background-image: url(img/arrows.svg);
+    background-size: cover;
+    z-index: 1;
+    &.left {
+      background-position: left;
+    }
+    &.right {
+      background-position: right;
+    }
+  }
+  h1 {
+    @extend .heading_m;
+  }
+  h2 {
+    @extend .heading_xs;
+    color: $gray-third;
+    text-transform: uppercase;
+    margin: 0 0 $vr;
+  }
+  p.lead {
+    @extend .heading_s;
+    @extend .strong;
+    margin: 0 0 2*$vr;
+  }
+  .carousel-indicators li {
+    @extend .small;
+    @extend .strong;
+    text-transform: uppercase;
+    line-height: 16px;
+  }
+  @include desktop {
+    &:before {
+      @include frame(top, 30);
+      height: 50%;
+    }
+    .carousel-inner {
+      margin: 0 6*$vr;
+      width: calc(100% - #{12*$vr});
+      .item {
+        @include horizontal-padding(4);
+        .row [class*="col"]:first-child {
+          @include vertical-padding(4);
+        }
+        .box {
+          padding: 32px 48px;
+          text-align: left;
+          .btn {
+            width: auto;
+          }
+        }
+      }
+    }
+    .carousel-indicators {
+      bottom: inherit;
+      left: inherit;
+      margin-left: inherit;
+      position: relative;
+      display: flex;
+      margin-bottom: 0;
+      padding: 0;
+      width: 100%;
+      margin-bottom: -5*$vr;
+      z-index: 0;
+      li {
+        border-radius: 0;
+        margin: 0;
+        border: 0;
+        background-color: $white;
+        flex-grow: 1;
+        padding: 2*$vr 0 0;
+        height: 20*$vr;
+        text-indent: 0;
+        [class*="icon-"] {
+          font-size: 48px;
+          color: #ccc;
+          transition: all 0.4s;
+          line-height: 56px;
+        }
+        &.active {
+          background-color: $brand-first;
+          border: 0;
+          color: $white;
+          [class*="icon-"] {
+            color: $white;
+          }
+        }
+        &:before {
+          content: none;
+        }
+      }
+    }
+    .carousel-control {
+      width: 48px;
+      height: 80px;
+      top: 50%;
+    }
+  }
+}
+
+#home_product-video {
+  .container:before {
+    @include frame(top);
+    height: 100%;
+  }
+  @include desktop {
+    .container:before {
+      height: 60%;
+      top: 20%;
+    }
+  }
+  @include mobile {
+    .productVideo {
+      margin: 32px -48px 0;
+    }
+  }
+  .box {
+    @include box-color($white);
+  }
+  h2 {
+    @extend .heading_s;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 4*$vr;
+    margin-top: 0;
+  }
+  p {
+    margin-top: 2*$vr;
+  }
+}
+
+#sec-home-consulting {
+  h1, h3 {
+    @extend .heading_s;
+  }
+  p.lead {
+    @extend .heading_l;
+    margin-top: 0;
+  }
+  @include mobile {
+    h3 {
+      text-align: center;
+    }
+  }
+}
+
+#home-consulting-advantages {
+  margin-top: 0;
+  .picture {
+    height: 30*$vr;
+  }
+  .box {
+    @include box-color($white);
+  }
+  @include desktop {
+    &:before, .picture {
+      @include frame(top, 5);
+      height: 100%;
+    }
+    .box {
+      margin-top: 24*$vr;
+    }
+  }
+}
+
+#sec-home-social {
+  h1 {
+    @extend .heading_s;
+  }
+}
+
+#home-social-hgroup {
+  .box {
+    @include box-color($white);
+  }
+  &:before {
+    @include frame(top, 20);
+    height: 100%;
+  }
+  @include desktop {
+    &:before {
+      height: calc(100% - #{10*$vr});
+    }
+  }
+}
+
+#home-social-components {
+  & > .row > .box {
+    @include horizontal-padding(2);
+    @include vertical-padding(0);
+    height: 380px;
+    &:nth-child(1) {
+      @include horizontal-padding(0);
+      @include home-testimonial;
+      height: inherit;
+    }
+  }
+  &:before {
+    @include frame(top, 5);
+    height: 100%;
+  }
+  [class*="icon-"] {
+    font-size: 36px;
+  }
+  @include desktop {
+    &:before {
+      height: 30*$vr;
+    }
+  }
+}
+
+#home-cta-agencies {
+  &:before {
+    @include frame(top, 5);
+    height: 100%;
+  }
+}
+
+#sec-home-content-link {
+  h1 {
+    @extend .heading_s;
+  }
+}
+
+#home-content-cta {
+  &:before {
+    @include frame(bottom);
+    height: 100%;
+  }
+  .box {
+    @include box-color($white);
+  }
+  @include desktop {
+    &:before {
+      height: 30*$vr;
+    }
+  }
+}

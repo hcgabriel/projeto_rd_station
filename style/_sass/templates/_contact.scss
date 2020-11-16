@@ -1,0 +1,98 @@
+#priority-channels {
+  margin-bottom: 6*$vr;
+  .box {
+    @include box-color($white);
+  }
+  img {
+    display: none;
+    width: 88px;
+  }
+  h2 {
+    margin-top: 4*$vr;
+    margin-bottom: 0px;
+    font-size: 3*$vr;
+    font-weight: 700;
+  } 
+  @include desktop {
+    img {
+      display: inline-block; 
+    }
+    h2 {
+      margin-top: 2*$vr;
+    }
+  }
+}
+
+#help-center {
+  img {
+    display: none;
+    width: 88px;
+  }
+  h2 {
+    margin-top: 4*$vr;
+    margin-bottom: 0px;
+    font-size: 3*$vr;
+    font-weight: 700;
+  } 
+  .col-md-10 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  @include desktop {
+    &:before {
+      @include frame(bottom);
+      height: 12*$vr;
+    }
+    .box {
+      @include box-color($white);
+    }
+    .col-md-10 {
+      display: flex;
+      align-items: center;
+      padding-bottom: 3*$vr;
+    }
+    img {
+      display: inline-block; 
+      margin-right: 3*$vr;
+    }
+    h2{
+      width: 40%;
+      margin-top: 0px;
+      margin-right: 3*$vr;
+    }
+    p {
+      width: 50%;
+      margin: 12px 0 0;
+    }
+  }
+}
+
+#contact-area {
+  margin-bottom: 8*$vr;
+  &:before {
+    @include frame(top);
+    height: calc(100% + #{5*$vr});
+  }
+  .picture {
+    height: 30*$vr; 
+  }
+  .box {
+    @include box-color($white);
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  @include desktop {
+    .box:nth-child(1) {
+      @include box-color(transparent);
+    }
+    .picture {
+      @include frame(top);
+      height: calc(100% + #{5*$vr});
+      justify-content: flex-end;
+      position: absolute;
+      img {
+        width: 50%;
+      }
+    }
+  }
+}

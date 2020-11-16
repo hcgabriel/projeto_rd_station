@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style/style.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="style/style.scss" media="screen">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Funcionalidades</title>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+	<main style="overflow: visible;">
+		<!--Menu-->
+		<div class="container">
+			<!--Dropdown Mobile-->
+			<div class="dropdown-menu-mobile">
+				<a href="#" class="myCenter nav-menu-link" data-toggle="collapse" data-target="#navmenu">Menu<i class="fa fa-chevron-down"></i></a>
+				<div id="navmenu" class="collapse">
+					<li><a href="central_dados.html">Central de Proteção de Dados</a></li>
+					<li><a href="protecao_dados.html">Conheça as leis: LGPD e GDPR</a></li>
+					<li><a class="active" href="funcionalidades.html">Funcionalidades</a></li>
+					<li><a href="base_conhecimento.html">Perguntas e Respostas</a></li>
+				</div>
+			</div>
+			<!--Nav Desktop-->
+			<nav>
+				<ul class="nav nav-menu">
+					<li class="nav-item">
+						<a class="nav-link" href="central_dados.html">Central de Proteção de Dados</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="protecao_dados.html">Conheça as leis: LGPD e GDPR</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" href="funcionalidades.html">Funcionalidades</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link disabled" href="base_conhecimento.html">Perguntas e Respostas</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<!--Topo-->
+		<section class="topo-funcionalidades">
+			<div class="container">
+			</div>
+		</section>
+
+		<section>
+			<div class="container">
+				<div class="row row-subtitle">
+					<div class="col-sm-12">
+						<h1 class="text-center">RD Station e LGPD: o que fizemos até agora</h1>
+						<p class="text-center">As funcionalidades abaixo foram desenvolvidas para possibilitar que nossos clientes criem estratégias adequadas à LGPD. Em breve, vamos liberar ainda mais recursos, pois temos times de Produto e Engenharia focados em mudanças e melhorias relacionadas à privacidade e proteção de dados nos dois produtos: RD Station Marketing e RD Station CRM.</p>
+						<span class="destaque text-center myCenter">As funcionalidades abaixo estão disponíveis em todos os planos do RD Station.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--Tabs-->
+	<section class="section-tabs">
+		<div class="container-fluid container-tab">
+			<div class="row row-tab">
+				<div class="col-sm-12">
+					<ul class="nav nav-tabs tabs-scroll myCenter">
+						<li class="active"><a data-toggle="tab" href="#menu1">Veja as funcionalidades do RD Station Marketing</a></li>
+						<li><a data-toggle="tab" href="#menu2">Veja as funcionalidades do RD Station CRM</a></li>
+					</ul>
+
+					<div class="tab-content" style="background: #F8F9FD;">	
+						<div id="menu1" class="tab-pane fade in active">
+
+							<div class="container">
+								<div class="row">
+									<nav class="col-sm-4 navbar" id="myScrollspy">
+										<ul class="nav nav-pills nav-stacked">
+											<li><h3>Bases legais</h3></li>
+											<li><a data-toggle="collapse" data-parent="#accordion" href="#collapse1" onclick="location.hash='#section1';">Bases Legais em Importação</a></li>
+											<li><a data-toggle="collapse" data-parent="#accordion" href="#collapse2" onclick="location.hash='#section2';">Bases Legais em Integrações</a></li>
+											<li><a data-toggle="collapse" data-parent="#accordion" href="#collapse3" onclick="location.hash='#section3';">Campos de Proteção de Dados</a></li>
+											<li><a data-toggle="collapse" data-parent="#accordion" href="#collapse4" onclick="location.hash='#section4';">Consentimento Retroativo</a></li>
+											<li><a data-toggle="collapse" data-parent="#accordion" href="#collapse5" onclick="location.hash='#section5';">Segmentação por Proteção de Dados</a></li>
+											<li><a data-toggle="collapse" data-parent="#accordion" href="#collapse6" onclick="location.hash='#section6';">Proteção de Dados no Perfil do Lead</a></li>
+											<li><a data-toggle="collapse" data-parent="#accordion" href="#collapse7" onclick="location.hash='#section7';">Gerenciamento de Cookies</a></li>
+										</ul>
+
+										<ul class="nav nav-pills nav-stacked">
+											<li><h3>Direitos do Titular</h3></li>
+											<li><a data-toggle="collapse" data-parent="#accordion" href="#collapse8" onclick="location.hash='#section8';">Desativação de Leads</a></li>
+											<li><a data-toggle="collapse" data-parent="#accordion" href="#collapse9" onclick="location.hash='#section9';">Edição de dados do Lead</a></li>
+											<li><a data-toggle="collapse" data-parent="#accordion" href="#collapse10" onclick="location.hash='#section10';">Exclusão de Leads</a></li>
+											<li><a data-toggle="collapse" data-parent="#accordion" href="#collapse11" onclick="location.hash='#section11';">Exportação de dados de Leads</a></li>
+										</ul>
+									</nav>
+									<div class="col-sm-8 col-12">
+
+										<div class="row row-titulo-acord">
+											<div class="col-sm-8 title-acord">
+												<video autoplay loop muted inline class="img-gif">
+													<source src="src/v2_NUVEM_FINAL.mp4" type="video/mp4">
+														<img src="src/v2_NUVEM_FINAL.gif" class="img-responsive img-gif">
+													</video>
+													<h2>Bases Legais</h2>
+												</div>
+											</div>
+
+											<div class="panel-group" id="accordion">
+												<div class="panel panel-default active content-spy" id="section1">
+													<div class="panel-heading acord-title">
+														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse1"><i class="fa fa-chevron-right"></i>Bases Legais em Importação</a>
+														</h4>
+													</div>
+													<div id="collapse1" class="panel-collapse collapse in">
+														<div class="panel-body">
+															<p>Para atribuir uma base legal no momento em que importa uma base de contatos, você conta com uma funcionalidade para escolher o tipo de processamento de dados e envio de comunicação.</p>
+															<a href="https://ajuda.rdstation.com.br/hc/pt-br/articles/201747314-Importação-de-Leads-e-Bases-Legais" target="_blank" class="btn btn-sm btn-primary">Saiba como usar a funcionalidade</a>
+														</div>
+													</div>
+												</div>
+
+												<div class="panel panel-default content-spy" id="section2">
+													<div class="panel-heading acord-title">
+														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse2"><i class="fa fa-chevron-right"></i>Bases Legais em Integrações</a>
+														</h4>
+													</div>
+													<div id="collapse2" class="panel-collapse collapse">
+														<div class="panel-body">
+															<p>Facilitamos o envio de bases legais via API (integração) para o RD Station com uma ferramenta e um passo a passo. Se você é desenvolvedor de um aplicativo que está na RD Station App Store ou tem um aplicativo integrado via API de uso próprio, use a ferramenta específica para seu caso.  
+															</p>
+															<a href="https://ajuda.rdstation.com.br/hc/pt-br/articles/360046082991-Como-utilizar-a-API-para-enviar-dados-de-Base-Legal" target="_blank" class="btn btn-sm btn-primary">Saiba como usar a funcionalidade</a>
+														</div>
+													</div>
+												</div>
+
+												<div class="panel panel-default content-spy" id="section3">
+													<div class="panel-heading acord-title">
+														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse3"><i class="fa fa-chevron-right"></i>Campos de Proteção de Dados</a>
+														</h4>
+													</div>
+													<div id="collapse3" class="panel-collapse collapse">
+														<div class="panel-body">
+															<p>Os campos de Proteção de Dados servem para coletar autorizações dos Leads (titulares dos dados) para o tratamento dos dados pessoais que acontece parcialmente ou totalmente por meio do RD Station Marketing.</p>
+															<h3>Relação com as leis</h3>
+															<p>LGPD e GDPR determinam que, para uma empresa realizar qualquer operação com um dado pessoal, é necessário ter uma base legal, ou seja, uma autorização da lei. Por isso, essa funcionalidade permite que as estratégias de aquisição de Leads sejam realizadas dentro das melhores práticas da lei.</p>
+															<a href="https://ajuda.rdstation.com.br/hc/pt-br/articles/360041453031-Campo-de-Privacidade-de-Dados" target="_blank" class="btn btn-sm btn-primary">Saiba como usar a funcionalidade</a>
+														</div>
+													</div>
+												</div>
+
+												<div class="panel panel-default content-spy" id="section4">
+													<div class="panel-heading acord-title">
+														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse4"><i class="fa fa-chevron-right"></i>Consentimento Retroativo</a>
+														</h4>
+													</div>
+													<div id="collapse4" class="panel-collapse collapse">
+														<div class="panel-body">
+															<p>Para saber se os contatos atuais querem ou não continuar recebendo emails ou ofertas, você pode usar algumas ofertas novas (modelos de emails para consentimento, por exemplo) para coletar o consentimento de forma retroativa.
+															</p>
+															<a href="https://ajuda.rdstation.com.br/hc/pt-br/articles/360045027692--BETA-Ferramentas-dispon%C3%ADveis-para-solicitação-de-Consentimento-Retroativo" target="_blank" class="btn btn-sm btn-primary">Saiba como usar a funcionalidade</a>
+														</div>
+													</div>
+												</div>
+
+												<div class="panel panel-default content-spy" id="section5">
+													<div class="panel-heading acord-title">
+														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse5"><i class="fa fa-chevron-right"></i>Segmentação por Proteção de Dados</a>
+														</h4>
+													</div>
+													<div id="collapse5" class="panel-collapse collapse">
+														<div class="panel-body">
+															<p>As novas condições de segmentação permitem filtrar Leads que autorizaram ou recusaram o processamento de seus dados e envio de comunicação.</p>
+															<a href="https://ajuda.rdstation.com.br/hc/pt-br/articles/360046107272-Segmentação-por-Privacidade-de-Dados" target="_blank" class="btn btn-sm btn-primary">Saiba como usar a funcionalidade</a>
+														</div>
+													</div>
+												</div>
+
+												<div class="panel panel-default content-spy" id="section6">
+													<div class="panel-heading acord-title">
+														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse6"><i class="fa fa-chevron-right"></i>Proteção de Dados no Perfil do Lead</a>
+														</h4>
+													</div>
+													<div id="collapse6" class="panel-collapse collapse">
+														<div class="panel-body">
+															<p>Para facilitar o gerenciamento de autorizações no tratamento dos dados pessoais dos Leads e também o exercício dos direitos dos titulares dos dados, passamos a exibir as informações de proteção de dados no Perfil do Lead.</p>
+															<h3>Relação com as leis</h3>
+															<a href="https://ajuda.rdstation.com.br/hc/pt-br/articles/360046807552--BETA-Privacidade-de-Dados-no-Perfil-do-Lead" target="_blank" class="btn btn-sm btn-primary">Saiba como usar a funcionalidade</a>
+														</div>
+													</div>
+												</div>
+
+												<div class="panel panel-default content-spy" id="section7">
+													<div class="panel-heading acord-title">
+														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse7"><i class="fa fa-chevron-right"></i>Gerenciamento de Cookies</a>
+														</h4>
+													</div>
+													<div id="collapse7" class="panel-collapse collapse">
+														<div class="panel-body">
+															<p>Para que você possa rastrear o comportamento dos visitantes do seu site ou Landing Page, é preciso uma notificação ou autorização do titular de dados para uso de cookies. Com os dois tipos de banners disponíveis, você avisa seus visitantes sobre uso e Política de cookies e também controla o uso desses dados de acordo com o consentimento obtido.</p>
+															<h3>Relação com as leis</h3>
+															<p>As leis de privacidade de dados consideram Cookies como um dado pessoal. Dessa forma, assim como você precisa atribuir uma Base Legal a um Lead, você também precisa coletar a autorização dos visitantes do seu site ou Landing Page para monitorar o comportamento deles.</p>
+															<a href="https://ajuda.rdstation.com.br/hc/pt-br/articles/360043902811-Como-ativar-o-banner-de-cookies" target="_blank" class="btn btn-sm btn-primary">Saiba como usar a funcionalidade</a>
+														</div>
+													</div>
+												</div>
+
+												<div class="row row-titulo-acord">
+													<div class="col-sm-8 title-acord">
+														<video autoplay loop muted inline class="img-gif">
+															<source src="src/v3_PESSOA_FINAL.mp4" type="video/mp4">
+																<img src="src/v3_PESSOA_FINAL.gif" class="img-responsive img-gif">
+															</video>
+															<h2>Direitos do Titular</h2>
+														</div>
+													</div>
+
+													<div class="panel-group" id="accordion3">
+														<div class="panel panel-default content-spy" id="section8">
+															<div class="panel-heading acord-title">
+																<h4 class="panel-title">
+																	<a data-toggle="collapse" data-parent="#accordion3" href="#collapse8"><i class="fa fa-chevron-right"></i>Desativar Lead</a>
+																</h4>
+															</div>
+															<div id="collapse8" class="panel-collapse collapse">
+																<div class="panel-body">
+																	<p>Caso um Lead entre em contato com a sua empresa pedindo para interromper o tratamento dos dados pessoais para fins de comunicações de marketing, é possível desativar este contato. O Lead também pode se descadastrar nos emails disparados pelo RD Station Marketing.</p>
+																	<h3>Relação com as leis</h3>
+																	<p>As legislações de Proteção de Dados garantem ao Lead o direito de solicitar a interrupção do processamento dos seus dados pessoais em alguns casos. Um exemplo é a oposição ao tratamento de dados quando a Base Legal utilizada não for a de Consentimento.</p>
+																	<a href="https://ajuda.rdstation.com.br/hc/pt-br/articles/360047980032-Direito-de-Objeção" target="_blank" class="btn btn-sm btn-primary">Saiba como usar a funcionalidade</a>
+																</div>
+															</div>
+														</div>
+
+														<div class="panel panel-default content-spy" id="section9">
+															<div class="panel-heading acord-title">
+																<h4 class="panel-title">
+																	<a data-toggle="collapse" data-parent="#accordion3" href="#collapse9"><i class="fa fa-chevron-right"></i>Editar dados do Lead</a>
+																</h4>
+															</div>
+															<div id="collapse9" class="panel-collapse collapse">
+																<div class="panel-body">
+																	<p>Os dados pessoais do contato podem ser atualizados de várias formas dentro do RD Station Marketing. A cada nova conversão, atualizando por importação ou mesmo manualmente.</p>
+																	<h3>Relação com as leis</h3>
+																	<p>As legislações de Proteção de Dados garantem aos Leads o direito de solicitar a correção de dados pessoais quando estiverem incompletos, inexatos ou desatualizados. A correção de ser imediata, considerando a LGPD e em até um mês, segundo a GDPR. Este direito é conhecido como Direito de Retificação ou Direito de Edição.</p>
+																	<a href="https://ajuda.rdstation.com.br/hc/pt-br/articles/360047974992-Direito-de-Retifica%C3%A7%C3%A3o" target="_blank" class="btn btn-sm btn-primary">Saiba como usar a funcionalidade</a>
+																</div>
+															</div>
+														</div>
+
+														<div class="panel panel-default content-spy" id="section10">
+															<div class="panel-heading acord-title">
+																<h4 class="panel-title">
+																	<a data-toggle="collapse" data-parent="#accordion3" href="#collapse10"><i class="fa fa-chevron-right"></i>Exclusão de Leads</a>
+																</h4>
+															</div>
+															<div id="collapse10" class="panel-collapse collapse">
+																<div class="panel-body">
+																	<p>Caso um Lead peça para interromper o Processamento dos Dados Pessoais, você pode excluir o contato.</p>
+																	<h3>Relação com as leis</h3>
+																	<p>O titular de dados tem o direito de solicitar a exclusão dos dados pessoais que sua empresa tem dele. No entanto, o direito de exclusão não é aboluto e depende do contexto do pedido. Por isso, nem sempre se aplica.</p>
+																	<a href="https://ajuda.rdstation.com.br/hc/pt-br/articles/360047371212-Direito-de-Exclus%C3%A3o" target="_blank" class="btn btn-sm btn-primary">Saiba como usar a funcionalidade</a>
+																</div>
+															</div>
+														</div>
+
+														<div class="panel panel-default content-spy" id="section11">
+															<div class="panel-heading acord-title">
+																<h4 class="panel-title">
+																	<a data-toggle="collapse" data-parent="#accordion3" href="#collapse11"><i class="fa fa-chevron-right"></i>Exportação de dados de Leads</a>
+																</h4>
+															</div>
+															<div id="collapse11" class="panel-collapse collapse">
+																<div class="panel-body">
+																	<p>Exporte dados de um Lead específico (ou de vários) com as informações de bases legais referentes a cada um deles.</p>
+																	<a href="https://ajuda.rdstation.com.br/hc/pt-br/articles/360050644672" target="_blank" class="btn btn-sm btn-primary">Saiba como usar a funcionalidade</a>
+																</div>
+															</div>
+														</div>
+
+													</div>
+												</div> 
+											</div>
+										</div>
+									</div>
+
+								</div>
+								<div id="menu2" class="tab-pane fade in">
+
+									<div class="container">
+										<div class="row">
+											<nav class="col-sm-4 navbar" id="myScrollspy">
+												<ul class="nav nav-pills nav-stacked">
+													<li><h3>Bases legais</h3></li>
+													<li><a data-toggle="collapse" data-parent="#accordion-2" href="#collapse12" onclick="location.hash='#section12';">Bases Legais em Importação</a></li>
+													<li><a data-toggle="collapse" data-parent="#accordion-2" href="#collapse13" onclick="location.hash='#section13';">Bases Legais Alterações em Massa</a></li>
+													<li><a data-toggle="collapse" data-parent="#accordion-2" href="#collapse14" onclick="location.hash='#section14';">Bases Legais Criação Manual</a></li>
+													<li><a data-toggle="collapse" data-parent="#accordion-2" href="#collapse15" onclick="location.hash='#section15';">Bases Legais Pré Configuração</a></li>
+													<li><a data-toggle="collapse" data-parent="#accordion-2" href="#collapse16" onclick="location.hash='#section16';">Bases Legais em Integração RD Station Marketing</a></li>
+												</ul>
+											</nav>
+											<div class="col-sm-8 col-12">
+
+												<div class="row row-titulo-acord">
+													<div class="col-sm-8 title-acord">
+														<video autoplay loop muted inline class="img-gif">
+															<source src="src/v2_NUVEM_FINAL.mp4" type="video/mp4">
+																<img src="src/v2_NUVEM_FINAL.gif" class="img-responsive img-gif">
+															</video>
+															<h2>Bases Legais</h2>
+														</div>
+													</div>
+
+													<div class="panel-group" id="accordion-2">
+
+														<div class="panel panel-default active content-spy" id="section12">
+															<div class="panel-heading acord-title">
+																<h4 class="panel-title">
+																	<a data-toggle="collapse" data-parent="#accordion-2" href="#collapse12"><i class="fa fa-chevron-right"></i>Bases Legais em Importação</a>
+																</h4>
+															</div>
+															<div id="collapse12" class="panel-collapse collapse in">
+																<div class="panel-body">
+																	<p>Para atribuir uma Base Legal no momento em que importa uma base de contatos, você conta com uma funcionalidade para escolher o tipo de processamento de dados e envio de comunicação.</p>
+																	<h3>Relação com as leis</h3>
+																	<p>A LGPD e GDPR determinam que, para uma empresa realizar qualquer operação com um dado pessoal, é necessário ter uma Base Legal, ou seja, uma autorização da lei. Por isso, essa funcionalidade permite que você atualize essa informação dentro do CRM dependendo das estratégias de aquisição de Leads e Contatos que a sua empresa realiza. </p>
+																	<a href="https://crmsupport.rdstation.com.br/hc/pt-br/articles/360047489591" target="_blank" class="btn btn-sm btn-primary">Saiba como usar a funcionalidade</a>
+																</div>
+															</div>
+														</div>
+
+														<div class="panel panel-default content-spy" id="section13">
+															<div class="panel-heading acord-title">
+																<h4 class="panel-title">
+																	<a data-toggle="collapse" data-parent="#accordion-2" href="#collapse13"><i class="fa fa-chevron-right"></i>Bases Legais Alterações em Massa</a>
+																</h4>
+															</div>
+															<div id="collapse13" class="panel-collapse collapse">
+																<div class="panel-body">
+																	<p>Caso você tenha uma lista de contatos no CRM que não estão com a Base Legal devidamente registrada. Você pode editar e adicionar essa informação para vários contatos ao mesmo tempo a partir dos filtros. Isso facilita a atualização das informações caso algo tenha sido importado errado anteriormente</p>
+																	<a href="https://crmsupport.rdstation.com.br/hc/pt-br/articles/360047489591" target="_blank" class="btn btn-sm btn-primary">Saiba como usar a funcionalidade</a>
+																</div>
+															</div>
+														</div>
+
+														<div class="panel panel-default content-spy" id="section14">
+															<div class="panel-heading acord-title">
+																<h4 class="panel-title">
+																	<a data-toggle="collapse" data-parent="#accordion-2" href="#collapse14"><i class="fa fa-chevron-right"></i>Bases Legais Criação Manual</a>
+																</h4>
+															</div>
+															<div id="collapse14" class="panel-collapse collapse">
+																<div class="panel-body">
+																	<p>Ao cadastrar manualmente um novo contato, você já pode adicionar as informações de Base Legal. Evitando que um novo contato  fique sem essa informação.</p>
+																	<a href="https://crmsupport.rdstation.com.br/hc/pt-br/articles/360047489591" target="_blank" class="btn btn-sm btn-primary">Saiba como usar a funcionalidade</a>
+																</div>
+															</div>
+														</div>
+
+														<div class="panel panel-default content-spy" id="section15">
+															<div class="panel-heading acord-title">
+																<h4 class="panel-title">
+																	<a data-toggle="collapse" data-parent="#accordion-2" href="#collapse15"><i class="fa fa-chevron-right"></i>Bases Legais Pré Configuração</a>
+																</h4>
+															</div>
+															<div id="collapse15" class="panel-collapse collapse">
+																<div class="panel-body">
+																	<p>Permite que você configure que todos os contatos gerados a partir de uma integração via API já tragam a informação de Bases Legais preenchidas. Sem precisar preenche-lás uma a uma quando entrarem na sua conta do RD Sation CRM </p>
+																	<a href="https://crmsupport.rdstation.com.br/hc/pt-br/articles/360047489591" target="_blank" class="btn btn-sm btn-primary">Saiba como usar a funcionalidade</a>
+																</div>
+															</div>
+														</div>
+
+														<div class="panel panel-default content-spy" id="section16">
+															<div class="panel-heading acord-title">
+																<h4 class="panel-title">
+																	<a data-toggle="collapse" data-parent="#accordion-2" href="#collapse16"><i class="fa fa-chevron-right"></i>Bases Legais em Integração RD Station Marketing</a>
+																</h4>
+															</div>
+															<div id="collapse16" class="panel-collapse collapse">
+																<div class="panel-body">
+																	<p>O envio das informações de Base Legal podem ser coletados no RD Station Marketing e são enviados automaticamente para o RD Station CRM. Para isso basta garantir que a integração entre as duas ferramentas está ativa.</p>
+																	<a href="https://crmsupport.rdstation.com.br/hc/pt-br/articles/360047489591" target="_blank" class="btn btn-sm btn-primary">Saiba como usar a funcionalidade</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!--CTA-->
+				<section class="cta-funcionalidades">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-12">
+								<h2 class="text-center title-cta">Quer experimentar esses e outros recursos?</h2>
+								<p class="text-center">Conheça nossas ferramentas de marketing e de vendas e aumente a eficiência da sua empresa para vender mais.</p>
+								<a href="https://www.rdstation.com/" target="_blank" class="btn btn-dark-blue myCenter" style="margin: 0 auto; width: fit-content;">Saiba mais</a>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" defer></script>
+			<script src="script/accordion-script.js"></script>
+		</body>
+		</html>

@@ -1,0 +1,74 @@
+.promo-top-label {
+    display: inline-block;
+    background-color: #f45567;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+    padding: 4px 12px;
+    font-size: 12px;
+    line-height: 16px;
+    &.-big {
+        padding: 8px 24px;
+        font-size: 14px;
+    }
+}
+
+.promo-striketrought-pricetag {
+    display: inline-block;
+    background-color: #f45567;
+    color: #fff;
+    padding: 4px 12px;
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 8px;
+    .promo-striketrought-price {
+        font-weight: bold;
+        text-decoration: line-through;
+    }
+    &.-med {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    &.-big {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+
+.m_mkt_plan_box-price_box.-promo{
+    background-color: #415b9c !important;
+    p, span { color: $white; }
+    .promo-striketrought-pricetag {
+        margin: 8px 0 0;
+    }
+}
+
+.o_rdsm_plan.-promotional {
+    .promo-striketrought-pricetag {
+        margin: 8px 0 0;
+    }
+}
+
+.o_customize_prices-summary .plan-chosen-email-count {
+    margin-bottom: 40px;
+}
+.o_customize_prices-summary .promo-striketrought-pricetag + .o_rdsm_plan-price {
+    margin-top: 0;
+}
+
+.currency-message {
+    padding: 40px 0 0;
+    .a_container {
+        padding: 16px 0;
+    }
+    p {
+        margin-bottom: 0;
+        strong {
+            color: $brand-third;
+        }
+    }
+}
+.o_rds_pricing_marketing {
+    margin-top: 48px !important;
+}

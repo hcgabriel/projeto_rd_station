@@ -1,0 +1,384 @@
+.page-template-page-diagnosis, .page-template-page-diagnosis-crisis{
+  h2{
+    font-weight: 700;
+  }
+  section{
+    & + section{
+      padding-top: 0;
+    }
+    footer{
+      padding: 20px 0 40px;
+    }
+  }
+  figcaption, .small{
+    font-size: 1em;
+    line-height: 1.5;
+    margin: 1em 0;
+  }
+
+  table{
+    font-size: 16px;
+    thead{
+      th{
+        border-bottom: 1px solid $gray-second;
+        padding: 16px 0;
+      }
+    }
+    tbody{
+      tr{
+        th, td{
+          font-weight: normal;
+          padding: 16px 0;
+        }
+        th{
+          padding-left: 48px;
+          position: relative;
+          text-align: left;
+          width: 60%;
+          &:before{
+            background: url('img/icon-success.svg') no-repeat center center;
+            background-size: 20px;
+            bottom: 0;
+            content: '';
+            display: inline-block;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 40px;
+          }
+        }
+        td{
+          overflow: hidden;
+          text-indent: -5000px;
+          width: 20%;
+          &:nth-child(2){
+            background: url('img/icon-success.svg') no-repeat center center;
+            background-size: 20px;
+          }
+          &:nth-child(3){
+            background: url('img/icon-error.svg') no-repeat center center;
+            background-size: 20px;
+          }
+        }
+        & + tr{
+          th, td{
+            border-top: 1px solid $gray-second;
+          }
+        }
+      }
+    }
+  }
+  .navbar{
+    text-align: center;
+    .navbar-header{
+      display: inline-block;
+      position: relative;
+      float: none;
+    }
+    .navbar-nav, .navbar-toggle{
+      display: none;
+    }
+  }
+  .hero{
+    padding-top: 0;
+    margin-top: 0;
+  }
+  .team{
+    img{
+      border-bottom: 1px solid $gray-second;
+    }
+  }
+  .reasons{
+    & > .row{
+      .box{
+        &:before{
+          top: 10px;
+        }
+      }
+    }
+    & + .sec-content{
+      top: -40px;
+      padding-bottom: 40px;
+    }
+  }
+  .about{
+    margin: 0 0 48px 0;
+    li{
+      h3{
+        margin: 16px 0;
+      }
+      img{
+        width: 180px;
+      }
+      &:before{
+        display: none;
+      }
+    }
+  }
+  .title-container{
+    .box:not(.hero){
+      margin-top: 96px;
+    }
+    .picture{
+      display: none;
+    }
+  }
+  .testimonial{
+    margin: -32px 0 0;
+    .picture{
+      bottom: 60px;
+    }
+    &:after{
+      display: none;
+    }
+  }
+  .video_thumbnail{
+    overflow: hidden;
+    position: relative;
+    .btn-video {
+      width: calc(100% - 32px);
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      text-align: center;
+      height: 100%;
+      color: white;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+      padding: calc(20% - 12px) calc(35% - 0px);
+      margin-top: 0;
+      display: block;
+      cursor: pointer;
+      .st2{
+        transition: all .2s;
+      }
+      &:hover{
+        text-decoration: none;
+        .st2 {
+          fill: #ff0000;
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .alert{
+    padding:{
+      top: 48px;
+      bottom: 32px;
+    }
+  }
+  .sec-content {
+    margin-top: 0;
+    padding-bottom: 40px;
+    &:before {
+      @include frame(bottom, 5);
+      height: 100%;
+      top: 0 !important;
+    }
+    [class*="col-"] [class*="col-"] {
+      @include horizontal-padding(0);
+    }
+    p.lead {
+      margin-top: 4*$vr
+    }
+    .box:nth-child(1) {
+      @include box-color($white);
+      margin-bottom: 3*$vr;
+    }
+    .o_conversion_form {
+      margin-top: -200px;
+    }
+  }
+  .sec-header {
+    .picture {
+      @include frame(top);
+      height: calc(100% - #{15*$vr});
+      position: absolute;
+      top: 15*$vr;
+    }
+    .box:nth-child(1) {
+      @include box-color($white);
+      margin-bottom: 45*$vr;
+    }
+    .box:nth-child(2) {
+      @include bright();
+    }
+    @include desktop {
+      &:before, .picture {
+        @include frame(top, 20);
+        height: calc(100% - 96px);
+      }
+      .box:nth-child(2) {
+        width: 60%;
+        margin-left: 20%;
+        padding: 0;
+      }
+      .box:nth-child(3) {
+        @include bright;
+        text-align: left;
+      }
+    }
+  }
+
+  .diagnosis-double_card {
+    .container {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+    [class^='col'] {
+      display: flex;
+    }
+    .a_box {
+      padding: 32px;
+      height: 100%;
+    }
+    @media screen and (min-width: 768px) {
+      .flex {
+        display: flex;
+      }
+    }
+    @media screen and (max-width: 767.9px) {
+      [class^='col'] + [class^='col'] {
+        margin-top: 24px;
+      }
+      blockquote {
+        grid-template-columns: auto 58px;
+      }
+    }
+  }
+
+  .diagnosis-double_card-crisis_cards {
+    .diagnosis-double_card-company_card {
+      .a_image {
+        background-size: contain;
+      }
+      .badge_box {
+        flex-flow: wrap;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      .gray_box {
+        align-items: center;
+        text-align: left;
+        background-color: $gray-second;
+        margin: -32px -32px -32px 32px;
+        padding: 32px;
+      }
+      @media screen and (max-width: 767.9px) {
+        .gray_box {
+          text-align: center;
+          margin: 24px -32px -32px -32px;
+        }
+      }
+    }
+  }
+
+
+  .diagnosis-benefits {
+    @media screen and (min-width: 768px) {
+      .flex {
+        display: flex;
+      }
+    }
+    @media screen and (max-width: 767.9px) {
+      .flex img {
+        max-height: 240px;
+        object-position: 0 25%;
+      }
+    }
+
+  }
+
+  .o_conversion_form {
+    label {
+      color: $white;
+    }
+    .btn {
+      width: 100%;
+    }
+  }
+
+  .pp-alert {
+    background-color: #3a518a;
+    padding: 16px;
+    color: #fff;
+  }
+
+  .field + .field {
+    margin-top: 24px;
+  }
+
+  .js-pp-field {
+    margin-top: 0px;
+  }
+
+  .mktform-checkbox-wrapper {
+    padding: 8px 16px 16px;
+    border: 1px solid rgba(0,0,0,0.1);
+    margin-top: 16px
+  }
+  .bricks-form__field__option {
+    text-align: left;
+    padding: 8px 0 0 20px;
+    margin-top: 0 !important;
+    position: relative;
+    input {
+      position: absolute;
+      left: 0px;
+    }
+    span {
+      font-weight: normal;
+    }
+  }
+
+}
+
+@media screen and (min-width: $screen-sm) {
+  .page-template-page-diagnosis, .page-template-page-diagnosis-crisis{
+    .alert{
+      padding-top: 160px;
+    }
+    .navbar{
+      padding-bottom: 8px;
+    }
+    #conversion-form{
+      .sec-content{
+        & > .row {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: $screen-md) {
+  .page-template-page-diagnosis, .page-template-page-diagnosis-crisis{
+    .alert{
+      padding-top: 208px;
+    }
+    .title-container{
+      .picture{
+        display: block;
+      }
+    }
+  }
+}
+
+// Exit Intent
+
+#exit-intent{
+  .box{
+    padding: 40px 80px;
+    h1{
+      font-size: 2em;
+      line-height: 1.333;
+      margin-top: 0 !important;
+    }
+    .btn{
+      margin-top: 16px;
+    }
+  }
+}

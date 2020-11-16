@@ -1,0 +1,18 @@
+.modal {
+  label {
+    display: block;
+    span.small {
+      font-weight: normal;
+      margin-bottom: 0;
+    }
+  }
+  .form-phone {
+    margin-top: 24px;
+  }
+}
+
+@include desktop  {
+  .modal-md {
+    width: 680px;
+  }
+}

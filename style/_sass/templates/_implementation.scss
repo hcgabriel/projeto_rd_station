@@ -1,0 +1,112 @@
+.implementation_content {
+  padding-top: 7*$vr;
+  .container {
+    h2, h3 {
+      @extend .heading_xs;
+      @extend .strong;
+    }
+    &:before {
+      @include frame(top, -5);
+      height: 15.5*$vr;
+    }
+    .nav-tabs {
+      border-bottom: 0;
+      position: relative;
+      height: 5.5*$vr;
+      &:after {
+        content: "";
+        position: absolute;
+        width: calc(100vw - 40px);
+        height: 1px;
+        background: $gray-second;
+        bottom: 1px;
+        left: calc(50% - 50vw + 20px);
+        z-index: -1;
+        @media screen and (min-width: 1440px) {
+          left: calc(-720px + 50% + 20px);
+          width: calc(1440px - 40px);
+        }
+      }
+      li {
+        padding-left: 0;
+        a {
+          color: $black;
+          box-shadow: none;
+        }
+        &.active {
+          a {
+            border-color: $gray-second;
+            border-bottom-color: transparent;
+          }
+        }
+        &:before {
+          content: none;
+        }
+      }
+      .btn {
+        margin: -16px 0 0;
+      }
+    }
+    .price {
+      font-size: 6*$vr;
+      font-weight: 800;
+      color: $brand-third;
+      display: inline-block;
+      .small {
+        font-size: 14px;
+        color: $black;
+        text-transform: uppercase;
+        height: 1.5*$vr;
+        display: block;
+        margin-bottom: 0px;
+        margin-left: 3px;
+      }
+    }
+  }
+  @include desktop {
+    .container {
+      .btn + .btn {
+        margin-left: 16px;
+      }
+    }
+  }
+  @include mobile {
+    padding-top: 0;
+    .container:before {
+      content: none;
+    }
+    .nav-tabs {
+      display: none;
+    }
+    .tab-content>.tab-pane {
+      display: block;
+      opacity: 1;
+      .box {
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-top: 0;
+        margin-top: 4*$vr;
+      }
+    }
+    .container .panel-group {
+      margin: 5*$vr $hr;
+      .panel-default .panel-body {
+        padding-left: $hr;
+        padding-right: $hr;
+      }
+    }
+  }
+  @include print {
+    padding-top: 0;
+    p.lead {
+      border-left: 4px solid $gray-second;
+      padding-left: 2*$hr;
+    }
+    .container {
+      #brief .col-md-6, #investment .col-md-4, #investment .col-md-8 {
+        float: left;
+        width: 50%;
+      }
+    }
+  }
+}

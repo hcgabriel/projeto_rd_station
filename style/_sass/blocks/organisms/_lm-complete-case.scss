@@ -1,0 +1,18 @@
+.o {
+  &_lm_complete_case {
+    h2 {
+      margin-top: 0;
+    }
+    &-testimonial {
+      margin-top: 64px;
+      @include desktop() {
+        margin-top: 32px;
+        margin-left: -48px;
+      }
+      & > p {
+        font-size: 18px;
+        line-height: 32px;
+      }
+    }
+  }
+}

@@ -1,0 +1,196 @@
+// =================================
+// BOX STYLES - MOBILE FIRST
+// =================================
+
+// Sets the background frame style.
+//// First argument is it's position [top(default) or bottom].
+//// Second argument is it's vertical offset, must be an integer that will be multiplied by the vertical rythm.
+@mixin frame($position:top, $v-offset:0) {
+  top: 0;
+  background-color: $gray-first;
+  content: "";
+  display: flex;
+  position: absolute;
+  z-index: -2;
+  left: 0;
+  width: 100vw;
+  @include desktop {
+    @if $position == "bottom" {
+      bottom: ($v-offset*$vr)-(5*$vr);
+      top: inherit;
+    }
+    @else {
+      top: ($v-offset*$vr)-(5*$vr);
+    }
+    left: calc(-50vw + 50% + 20px);
+    width: calc(100vw - 40px);
+  }
+  @media screen and (min-width: 1440px) {
+    left: calc(-720px + 50% + 20px);
+    width: calc(1440px - 40px);
+  }
+}
+
+@mixin new_frame($color:"gray"){
+  &:before {
+    content: "";
+    top: 40px;
+    height: calc(100% - 80px);
+    display: flex;
+    position: absolute;
+    z-index: -2;
+    left: 0;
+    width: 100vw;
+    @if $color == "gray" {
+      background: $gray-first;
+    }
+    @else if $color == "gradient-1" {
+      background-image: -webkit-linear-gradient(-80deg, #354966 22%, #9463D6 100%);
+      background-image: -o-linear-gradient(-80deg, #354966 22%, #9463D6 100%);
+      background-image: linear-gradient(170deg, #354966 22%, #9463D6 100%);
+    }
+    @else if $color == "gradient-2" {
+      /* Rectangle 6: */
+      background-image: -webkit-linear-gradient(119deg, #415B9C 3%, #F45566 100%);
+      background-image: -o-linear-gradient(119deg, #415B9C 3%, #F45566 100%);
+      background-image: linear-gradient(209deg, #415B9C 3%, #F45566 100%);
+    }
+    @else if $color == "gradient-3" {
+      /* Rectangle 6: */
+      background-image: -webkit-linear-gradient(180deg, #415B9C 3%, #9462D6 100%);
+      background-image: -o-linear-gradient(180deg, #415B9C 3%, #9462D6 100%);
+      background-image: linear-gradient(180deg, #415B9C 3%, #9462D6 100%);
+    }
+    @include desktop {
+      left: calc(-50vw + 50% + 20px);
+      width: calc(100vw - 40px);
+    }
+    @media screen and (min-width: 1440px) {
+      left: calc(-720px + 50% + 20px);
+      width: calc(1440px - 40px);
+    }
+  }
+}
+
+// Sets background-color to boxes.
+//// Argument must be a color, preferably a Sass color variable, or a rgba, hex or color name.
+@mixin box-color($bgColor:$white, $bgEffect:"") {
+  position: relative;
+  &:before {
+    background-color: $bgColor;
+    content: "";
+    width: calc(100% - #{4*$hr});
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 2*$hr;
+    z-index: -1;
+  }
+  @if $bgEffect == "material" {
+    &:before {
+      width: 100%;
+      left: 0;
+    }
+    border: 1px solid $gray-second;
+    box-shadow: 0px 0px 8px rgba($gray-third, 0.2);
+  }
+  @else if $bgEffect == "overflow" {
+    &:before {
+      width: 100vw;
+    }
+  }
+}
+
+.box-white {
+  @include box-color($white);
+}
+
+// Applies Testimonial style.
+@mixin home-testimonial {
+  .box {
+    @include box-color($white);
+  }
+  .picture:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: -moz-linear-gradient(top, rgba($complement-first,0) 50%,rgba($complement-first,0.3) 100%);
+    background: -webkit-linear-gradient(top, rgba($complement-first,0) 50%,rgba($complement-first,0.3) 100%);
+    background: linear-gradient(to bottom, rgba($complement-first,0) 50%,rgba($complement-first,0.3) 100%);
+  }
+  @include desktop {
+    .box:before {
+      width: calc(100% - #{4*$hr});
+    }
+    .picture {
+      transform: translateX(#{2*$hr});
+      height: auto;
+      margin-bottom: initial;
+      &[class*="col-md-push"] {
+        transform: translateX(-#{2*$hr});
+      }
+    }
+  }
+}
+
+// Applies Testimonial style.
+@mixin feature-testimonial {
+  @include home-testimonial;
+  .picture {
+    margin-top: -4*$vr;
+    img {
+      width: calc(100% - #{4*$hr});
+    }
+  }
+  @include desktop {
+    .picture {
+      z-index: 0 !important;
+      margin-top: 0;
+      img {
+        width: 100%;
+      }
+    }
+    .box {
+      @include box-color($white, overflow);
+    }
+  }
+}
+
+// Style images behavior on small screens
+.picture {
+  align-items: center;
+  display: flex;
+  height: 20*$vr;
+  margin-bottom: -5*$vr;
+  overflow: hidden;
+  @include horizontal-padding(0);
+  position: relative;
+  z-index: -1 !important;
+  &>img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    display: block;
+    top: 0;
+    right: 0;
+  }
+}
+
+
+.video {
+  video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.media {
+  @include mobile {
+    @include horizontal-padding(0);
+  }
+}

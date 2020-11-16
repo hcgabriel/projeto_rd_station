@@ -1,0 +1,39 @@
+.big_list {
+  @include desktop {
+    ul li {
+      padding-left: $hr*6;
+      margin-bottom: $vr*4;
+      &:before {
+        background-size: 24px;
+        height: 50px;
+        top: 4px;
+        width: 24px;
+      }
+    }
+  }
+  ol li {
+    padding-left: $hr*8;
+    margin-bottom: $vr*4;
+    &:before {
+      @extend .stronger;
+      color: $gray-second;
+      font-size: 80px;
+      height: 80px;
+      position: absolute;
+      top: 20px;
+      width: 80px;
+    }
+  }
+  &.med_numbers {
+    ol li {
+      padding-left: $hr*5;
+      &:before {
+        font-size: 40px;
+        height: 40px;
+        top: 12px;
+        width: 40px;
+        font-style: italic;
+      }
+    }
+  }
+}

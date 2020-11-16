@@ -1,0 +1,45 @@
+.a {
+  &_brand_header {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 280px auto;
+    display: block;
+    height: 104px;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    text-indent: -9999px;
+    width: 100%;
+    z-index: 1;
+    @include desktop(){
+      background-size: auto 48px;
+    }
+
+    // Modifiers
+    &.-rd_station_marketing {
+      background-image: url(img/logos/rd-station-marketing.svg);
+      &.-white {
+        background-image: url(img/logos/rd-station-marketing-white.svg);
+      }
+    }
+
+    &.-rd_station_marketing_light {
+      background-image: url(img/logos/rd-station-marketing-light.svg);
+      &.-white {
+        background-image: url(img/logos/rd-station-marketing-light-white.svg);
+      }
+      &.-beta {
+        background-image: url(img/logos/rd-station_marketing_light-beta.svg);
+        @media screen and (min-width: 560px) {
+          background-size: auto 59px;
+        }
+      }
+    }
+
+    &.-align_left {
+      @media screen and (min-width: 992px) {
+        background-position: center left;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+//Bootstrap override
+main>header>nav.navbar-default ul.navbar-nav .lang_dropdown .dropdown-toggle{
+  font-size: 14px !important;
+  text-transform: capitalize;
+  letter-spacing: 0;
+}
+.pricing-link{
+  color: $white !important;
+  font-weight: 700;
+  box-shadow: inset 0px -1px 0px $white !important;;
+  &:hover, &:active, &:focus{
+    box-shadow: inset 0px -1px 0px $white !important;;
+    color: $white !important;
+  }
+}

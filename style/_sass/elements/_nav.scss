@@ -1,0 +1,278 @@
+main>header>nav.navbar-default {
+  border: 0;
+  background: transparent;
+  position: absolute;
+  border-radius: 0;
+  width: 100%;
+  z-index: 101;
+  transition: all .4s;
+  &.affix, &.open, &.always_open {
+    position: fixed;
+    padding-top: 0;
+    background-color: $brand-first;
+  }
+  .navbar-brand {
+    .logo {
+      width: 120px;
+      height: 21px;
+      overflow: hidden;
+      text-indent: -9999px;
+      background-image: url(img/logo-white.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: block;
+    }
+  }
+  .login-bar {
+    background-color: darken($brand-first, 5%);
+    height: 36px;
+    text-align: right;
+    margin: 0 -16px;
+    padding: 4px 32px;
+    display: none;
+    .language-switcher {
+      display: inline-block;
+      top: 1px;
+      position: relative;
+      margin-right: 16px;
+      & > a {
+        color: $white;
+        display: inline-block;
+        font-size: 13px;
+        text-decoration: none;
+      }
+    }
+    .btn {
+      padding: 0;
+      margin-top: 0;
+      border: 0;
+    }
+  }
+  .navbar-toggle {
+    border: 0;
+    padding: 10px 0;
+    &:hover, &:focus {
+      background-color: transparent;
+    }
+    .icon-bar {
+      height: 3px;
+      background-color: $white;
+    }
+  }
+  .navbar-collapse {
+    border: 0;
+    box-shadow: none;
+  }
+  ul.navbar-nav {
+    padding: 0 16px 16px;
+    margin: 0 -15px;
+    li {
+      padding: 0;
+      margin: 0;
+      &:before {
+        content: none;
+      }
+      a, a:focus, .dropdown-title, .dropdown-title:focus {
+        padding: 12px 0;
+        box-shadow: none;
+        color: $white;
+        display: block;
+        text-align: center;
+      }
+      &.active>a, &:hover>a, &:focus>a, &.open>a,
+      &.active>.dropdown-title, &:hover>.dropdown-title, &:focus>.dropdown-title, &.open>.dropdown-title {
+        &, &:hover, &:focus {
+          background-color: darken($brand-first, 5%);
+          color: $white;
+        }
+      }
+      &.open ul.dropdown-menu {
+        padding: 0;
+        [class*="col-"] {
+          margin-left: 0;
+          margin-right: 0;
+          padding: 0 16px;
+          h4 {
+            font-size: 16px;
+            margin-bottom: 4px;
+          }
+          p {
+            font-size: 13px;
+            margin-bottom: 0;
+          }
+          @include mobile {
+            h4, p {
+              color: $white;
+            }
+          }
+        }
+        &>li {
+          padding: 0;
+          &>a {
+            padding: 12px 16px;
+            color: $white;
+            text-align: center;
+            &.active, &:hover, &:focus {
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+    .lang_dropdown .dropdown-toggle {
+      font-size: 11.5px !important;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+  }
+  ul .btn {
+    margin-top: 12px;
+  }
+  @include desktop {
+    padding: 16px 16px 0;
+    .navbar-brand {
+      .logo {
+        margin-top: 6px;
+      }
+    }
+    .navbar-brand {
+      .logo {
+        margin-top: 6px;
+        &.logo-home {
+          width: 160px;
+          height: 28px;
+          float: left;
+        }
+      }
+      .logo-desc {
+        display: block;
+        float: left;
+        font-size: 13px;
+        line-height: 15px;
+        color: $white;
+        margin: 7px 0 0 16px;
+      }
+    }
+    &.affix {
+      .navbar-brand {
+        .logo.logo-home {
+          width: 120px;
+          height: 21px;
+        }
+        .logo-desc {
+          margin: 0 0 0 16px;
+        }
+      }
+    }
+    ul.navbar-nav li {
+      padding: 24px 32px 0 0;
+      margin: 0;
+      a, a:focus {
+        padding: 0 0 4px;
+        box-shadow: none;
+        font-size: 14px;
+        line-height: 16px;
+        color: $white;
+        text-align: left;
+      }
+      &.active a, &:hover a, &:focus a, &.open a {
+        &, &:hover, &:focus {
+          background-color: transparent;
+          box-shadow: inset 0 -2px 0 $brand-second;
+          color: $white;
+        }
+      }
+      &.open ul.dropdown-menu {
+        background: $white;
+        border-radius: 0;
+        border: 1px solid $gray-second;
+        box-shadow: 0px 0px 8px rgba($gray-third, 0.2);
+        left: calc(50% - 100px);
+        padding: 0;
+        &.row {
+          width: 320px;
+          position: absolute;
+          right: -100px;
+          left: inherit;
+          height: auto;
+          [class*="col-"] {
+            margin: 0;
+            padding: 0;
+            li {
+              a {
+                padding: 16px 32px;
+                text-align: left;
+                color: $brand-third;
+              }
+            }
+            &:first-child:after {
+              content: "";
+              position: absolute;
+              width: 1px;
+              height: 80%;
+              top: 10%;
+              right: 0;
+              background-color: #e8ebf1;
+            }
+          }
+        }
+        li {
+          padding: 0;
+          a {
+            padding: 12px 0;
+            color: $black;
+            text-align: center;
+            box-shadow: none;
+            &.active, &:hover, &:focus {
+              box-shadow: none;
+              color: $black;
+              background-color: $gray-second;
+            }
+          }
+        }
+      }
+    }
+    .login-bar {
+      display: block;
+    }
+    .language-switcher.open ul.dropdown-menu {
+      background: $white;
+      border-radius: 0;
+      border: 1px solid $gray-second;
+      box-shadow: 0px 0px 8px rgba($gray-third, 0.2);
+      left: calc(50% - 100px);
+      padding: 0;
+      li {
+        margin-bottom: 0;
+        padding-left: 0;
+        a {
+          font-size: 13px;
+          padding: 12px 0;
+          color: $brand-third;
+          box-shadow: none;
+          text-align: center;
+        }
+        &:before {
+          content: none;
+        }
+      }
+    }
+    ul .btn {
+      float: right;
+    }
+  }
+  @include desktop() {
+    &.-white_bg:not(.affix) {
+      li a, li a:hover, li a:focus, li a:active {
+        color: $brand-third !important;
+      }
+    }
+  }
+}
+
+// fix home menu spacement for smaller desktop and tablet screens
+@media screen and (min-width:992px) and (max-width: 1279px) {
+    main#home .logo-desc { display: none; }
+    main#home .logo-home { width: 120px; background-size: contain; }
+    main > header > nav.navbar-default ul.navbar-nav li { padding-right: 20px; }
+}

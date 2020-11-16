@@ -1,0 +1,24 @@
+/*!
+Theme Name: RD Station - Site
+Author: Resultados Digitais
+Author URI: http://resultadosdigitais.com.br
+Description: Tema para site do RD Station.
+Version: 2.11
+
+*/
+
+// Base Styles
+
+@import "_sass/_bootstrap.scss";
+@import "_sass/_variables.scss";
+@import "_sass/_grid.scss";
+
+@import "_sass/owl-carousel/owl.carousel.scss";
+
+@import "_sass/_components.scss";
+@import "_sass/_elements.scss";
+@import "_sass/_templates.scss";
+@import "_sass/_blocks.scss";
+
+@import "_sass/bug-fixes.scss";
+@import "_sass/animations.scss";

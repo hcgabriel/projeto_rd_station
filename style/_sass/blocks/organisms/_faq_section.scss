@@ -1,0 +1,12 @@
+.o {
+  &_faq_section {
+    background-color: $brand-first;
+    margin-bottom: 0 !important;
+    h2, h3, p {
+      color: $white;
+    }
+    & + footer {
+      background-color: darken($brand-first, 5%) !important;
+    }
+  }
+}

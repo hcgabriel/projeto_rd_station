@@ -1,0 +1,110 @@
+/* Form */
+
+.control-group, #first_step {
+  position: relative;
+  margin-bottom: 16px;
+  > input, textarea, select {
+    &:disabled{
+      cursor: not-allowed;
+      opacity: .5;
+      &:after{
+        opacity: .5;
+      }
+    }
+  }
+  > .checkbox {
+    margin-top: 0;
+    margin-bottom: 8px;
+    padding: 2px 0;
+    &:first-of-type {
+      margin-top: 8px;
+    }
+    &>label {
+      margin-bottom: 0 !important;
+    }
+    input[type="checkbox"], .radio input[type="radio"] {
+      position: static;
+      margin: 0 $hr 0 -2*$hr;
+    }
+    &.outed ~ .valError {
+      height: auto;
+      max-height: 48px;
+      padding: 8px 0;
+    }
+  }
+  .valError {
+    padding: 0;
+    height: 0;
+    display: block;
+    overflow: hidden;
+    color: $highlight;
+    transition: height 0.2s;
+  }
+}
+
+.hidden-submit {
+  visibility: hidden;
+}
+
+.form-group.hidden-animate,
+.control-group.hidden-animate {
+  max-height: 0;
+  margin: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, margin-bottom 0.5s ease-out;
+}
+.form-group.hidden-animate.opened,
+.control-group.hidden-animate.opened {
+  max-height:200px;
+  margin-bottom: 15px;
+  overflow: auto;
+  transition: max-height 0.5s ease-out, margin-bottom 0.5s ease-out;
+}
+.control-group .radio-group {
+  padding-left: 12px;
+  transition: padding 0.4s;
+}
+.control-group .radio-group .checkbox {
+  display: inline-block;
+}
+.control-group .radio-group .checkbox + .checkbox {
+  margin-left: 32px;
+}
+.control-group .radio-group input {
+  display: inline-block;
+}
+.control-group .radio-group label {
+  display: inline-block;
+  padding-left: 8px;
+}
+
+/* Removes Webkit Autocomplete styles */
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  background-color: $white !important;
+  -webkit-text-fill-color: $black !important;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 9999s ease-in-out 0s;
+  padding: 8px!important;
+}
+
+/* Overrides RD Station Phone number styles */
+.country-list li{
+  margin: 0;
+  span{
+    color: $black;
+    font-size: 12px;
+  }
+  &:before{
+    content: none;
+  }
+}

@@ -1,0 +1,11 @@
+.container {
+  &--gray-frame {
+    @include new_frame();
+    padding-top: 40px;
+    padding-bottom: 40px;
+    &:before {
+      top: 0;
+      height: 100%;
+    }
+  }
+}

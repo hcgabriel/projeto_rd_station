@@ -1,0 +1,26 @@
+/* Header */
+
+main>header, .title-container {
+  margin-top: 0;
+  .picture {
+    height: 10*$vr;
+  }
+  .box {
+    @include box-color($white);
+  }
+  h1 {
+    @extend .heading_m;
+    @extend .strong;
+  }
+  @include desktop {
+    .picture {
+      @include frame(top, 5);
+      height: calc(100% - #{10*$vr});
+      width: 100vw !important;
+      left: calc(-50vw + 50%) !important;
+    }
+    .box {
+      margin-top: 18*$vr;
+    }
+  }
+}

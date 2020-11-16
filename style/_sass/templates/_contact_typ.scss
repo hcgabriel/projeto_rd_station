@@ -1,0 +1,24 @@
+#contato-typ {
+  .box {
+    @include box-color($white);
+    text-align: center;
+    img {
+      max-width: 100%;
+      margin-bottom: 3*$vr;
+    }
+  }
+  &:before {
+    @include frame(top, 5);
+    height: 100%;
+  }
+  @include desktop {
+    .box img {
+      max-width: calc(100% + #{8*$vr});
+      margin: -4*$vr 0 3*$vr -4*$vr;
+    }
+    &:before {
+      @include frame(top, 0);
+      height: 40*$vr;
+    }
+  }
+}

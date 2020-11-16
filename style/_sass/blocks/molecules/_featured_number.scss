@@ -1,0 +1,16 @@
+.m {
+  &_featured_number {
+    color: $brand-third;
+    text-align: center;
+    @include desktop() {
+      text-align: left;
+    }
+    // Elements
+    &-number {
+      font-size: 40px;
+      line-height: 56px;
+      font-weight: 700;
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,512 @@
+#rdscrm-hero_header {
+  padding: ($vr * 15) 0;
+  background-image: url(img/home-hero-crm-bg.svg);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: contain;
+  background-attachment: fixed;
+  box-shadow: inset 0px -80px 100px #ffffff;
+  .rdscrm-hero_header-basic_cta {
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    margin: 24px auto;
+    max-width: 300px;
+    a {
+      display: inline !important;
+    }
+  }
+  @include desktop {
+    padding: ($vr * 20) 0 ($vr * 5);
+    h1 + p {
+      font-size: 15px;
+    }
+    .btn {
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+    .rdscrm-hero_header-basic_cta {
+      display: inline-block;
+      margin: 0 0 0 20px;
+      padding: 0;
+      position: relative;
+      top: 16px;
+      text-align: left;
+    }
+    .container:before {
+      content: "";
+      width: 700px;
+      height: 500px;
+      background-image: url(img/home-hero-crm.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      position: absolute;
+      display: block;
+      left: 50%;
+      top: calc(50% - 300px);
+    }
+  }
+  h1 {
+    font-weight: bold;
+    font-size: 36px;
+  }
+  .btn-pres-video {
+    color: $brand-first;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 24px 0;
+    display: block;
+    cursor: pointer;
+    &:hover, &:focus, &:active {
+      text-decoration: none;
+      color: $brand-first;
+    }
+    [class*="icon-"] {
+      color: $brand-first;
+      font-size: 32px;
+      display: inline-block;
+      position: relative;
+      top: 8px;
+      margin-right: 8px;
+    }
+  }
+  .btn-play-video{
+    background: $brand-second;
+    border-radius: 96px;
+    box-shadow: $gray-third 0 2px 4px;
+    cursor: pointer;
+    display: inline-block;
+    height: 96px;
+    margin: 120px 0 0 120px;
+    overflow: hidden;
+    position: relative;
+    text-indent: -5000px;
+    transition: all .15s ease-in-out;
+    width: 96px;
+    &:hover, &:focus, &:active {
+      background: lighten($brand-second, 5%);
+      box-shadow: rgba($gray-third, .7) 0 4px 6px;
+      margin-top: 116px;
+    }
+    &:after{
+      border:{
+        bottom: 20px solid transparent;
+        left: 40px solid $white;
+        top: 20px solid transparent;
+      }
+      content: '';
+      display: block;
+      height: 0;
+      width: 0;
+      position: absolute;
+      left: 32px;
+      top: 30px;
+      text-indent: 0;
+    }
+  }
+  @include mobile {
+    background-image: url(img/home-hero-marketing-bg-mobile.svg);
+    [class*="col"] {
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+    h1 {
+      font-size: 32px;
+      line-height: 40px;
+    }
+    .rd_crm_logo {
+      max-width: 100%;
+    }
+    .btn-pres-video {
+      line-height: 24px;
+      padding-left: 0px;
+      position: relative;
+      margin: 24px 0;
+      text-align: center;
+      [class*="icon-"] {
+        display: none;
+      }
+    }
+  }
+}
+
+#rdscrm-soft_features {
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 32px;
+  }
+  [class*="col"] {
+    img {
+      max-width: 100%;
+    }
+  }
+  .a_box {
+    padding: 0;
+  }
+  .rdscrm-soft_features-integration {
+    padding: 80px 0 0 !important;
+  }
+  .rdscrm-soft_features-integration + .rdscrm-soft_features-integration {
+    padding: 0 0 80px !important;
+  }
+  @include desktop {
+    .container:not(.-gradient_frame){
+      .row {
+        padding: ($vr*10) 0;
+        display: flex;
+        [class*="col"] {
+          align-self: center;
+          img {
+            max-width: 100%;
+          }
+          &:not(.box) {
+            position: relative;
+            @include new_frame("gradient-1");
+            &:before {
+              right: 20px;
+              width: calc(720px - 40px);
+              left: inherit;
+            }
+            &[class*="push"]:before {
+              right: inherit;
+              left: 20px;
+            }
+          }
+        }
+      }
+    }
+    .rdscrm-soft_features-integration {
+      .btn + .btn {
+        margin-left: 16px;
+      }
+    }
+  }
+  @include mobile {
+    .box {
+      margin-top: 0;
+      margin-bottom: 48px;
+    }
+    .rdscrm-soft_features-integration .box {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+}
+#rdscrm-feature_list {
+  .container {
+    padding: ($vr * 8) 0;
+    @include new_frame();
+    &:before {
+      top: 0;
+      height: 100%;
+    }
+  }
+  h2 {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: bold;
+  }
+  .btn {
+    margin-top: 0;
+  }
+  .btn + a {
+    margin: 24px 24px 0;
+  }
+  .row {
+    padding: ($vr * 4) 0;
+  }
+  .rdscrm_feature {
+    h3 {
+      font-weight: bold;
+    }
+  }
+  [class*="feature_ico-"] {
+    padding: 12px 0 0 56px;
+    background-repeat: no-repeat;
+    background-position: left 6px;
+    background-size: 44px;
+    margin: 0;
+    background: none !important;
+    padding: 12px 0 6px;
+    & + p{
+      margin-top: 12px;
+    }
+    & + span{
+      color: $brand-second;
+      display: inline-block;
+      font-size: 14px;
+      line-height: 16px;
+      margin: 8px 0 24px 0;
+      padding: 0 0 0 0;
+    }
+  }
+  .feature_ico-01 { background-image: url(img/icons/feature_icon-social_media.svg); }
+  .feature_ico-02 { background-image: url(img/icons/feature_icon-fb_ads.svg); }
+  .feature_ico-03 { background-image: url(img/icons/feature_icon-seo.svg); }
+  .feature_ico-04 { background-image: url(img/icons/feature_icon-landing_pages.svg); }
+  .feature_ico-05 { background-image: url(img/icons/feature_icon-email_mkt.svg); }
+  .feature_ico-06 { background-image: url(img/icons/feature_icon-ab_test.svg); }
+  .feature_ico-07 { background-image: url(img/icons/feature_icon-automation.svg); }
+  .feature_ico-08 { background-image: url(img/icons/feature_icon-lead_monitoring.svg); }
+  .feature_ico-09 { background-image: url(img/icons/feature_icon-lead_scoring.svg); }
+  .feature_ico-10 { background-image: url(img/icons/feature_icon-success_plans.svg); }
+  .feature_ico-11 { background-image: url(img/icons/feature_icon-analysis.svg); }
+  .feature_ico-12 { background-image: url(img/icons/feature_icon-bi.svg); }
+  @include mobile {
+    [class*="col"] {
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+    h2 {
+      font-size: 24px;
+      line-height: 32px;
+    }
+    .btn + a {
+      display: block;
+      text-align: center;
+    }
+    .row {
+      padding: 0;
+      &:first-child {
+        margin-bottom: 40px;
+      }
+    }
+    [class*="feature_ico-"] {
+      padding: 56px 0 0px 0px;
+      font-size: 20px;
+      & + span{
+        padding: 0;
+      }
+    }
+  }
+}
+
+#rdscrm-cta {
+  padding:{
+    bottom: 0;
+    top: 0;
+  }
+  margin-bottom: 80px;
+  h2 {
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 48px;
+  }
+  .btn{
+    & + p{
+      font-size: 14px;
+      line-height: 24px;
+      margin-top: 16px;
+    }
+  }
+  @include desktop {
+    .btn {
+      padding:{
+        left: 64px;
+        right: 64px;
+      }
+    }
+  }
+}
+
+#rdscrm-basic {
+  padding:{
+    bottom: 0;
+    top: 20px;
+  }
+  h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .a_box{
+    padding:{
+      left: 40px;
+      right: 40px;
+    }
+  }
+  .reasons{
+    margin-top: 64px;
+    h3{
+      color: $white;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 24px;
+      margin: 0 0 32px;
+    }
+    h4{
+      color: $white;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 24px;
+    }
+    p{
+      color: $white;
+    }
+    img{
+      height: 64px;
+      width: auto;
+      & + h4{
+        margin-top: 24px;
+      }
+    }
+  }
+  @include desktop {
+    .a_box{
+      margin-right: 30px;
+    }
+    .reasons{
+      margin-top: 0;
+    }
+  }
+}
+
+#rdscrm-pricing-tables {
+  margin-top: 80px;
+  h2 {
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 700;
+  }
+}
+
+#rdscrm-integrations{
+  padding:{
+    top: 80px;
+  }
+  .flex {
+    align-items: center;
+  }
+  [class*="col"] img {
+    max-width: 100%;
+  }
+  .a_container{
+    &.-gray_frame, &.-gradient_frame{
+      .text-white{
+        color: $white;
+      }
+      &:before {
+        bottom: 40px;
+        height: auto;
+        top: 40px;
+      }
+    }
+  }
+  .row{
+    .a_box{
+      height: 100%;
+    }
+    [class*="col"] {
+      &:first-child {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .integrations {
+    display: flex;
+    flex-direction: column;
+    div.spacing {
+      flex-grow: 1;
+    }
+  }
+  p{
+    font-size: 16px;
+    line-height: 24px;
+  }
+  ul{
+    display: grid;
+    grid-gap: 30px 15px;
+    justify-items: stretch;
+    align-items: stretch;
+    margin-bottom: 16px;
+    flex: 1;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    li{
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      img{
+        height: 32px;
+        object-fit: contain;
+        width: 32px;
+      }
+      span{
+        display: inline-block;
+        font-size: 14px;
+        line-height: 16px;
+        margin-top: 16px;
+        width: 100%;
+      }
+      &:before{
+        display: none;
+      }
+    }
+    &.crm_integration_topics {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px 32px;
+      margin: 24px 0 48px;
+      li {
+        img {
+          height: 80px;
+          width: 80px;
+        }
+        span {
+          margin-top: 0;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+  @include desktop {
+    .row{
+      [class*="col"] {
+        &:first-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    ul{
+      grid-gap: 20px 15px;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      &.crm_integration_topics {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+      li{
+        img{
+          height: 42px;
+          width: 42px;
+        }
+      }
+    }
+    .btn + .btn {
+      margin-left: 16px;
+    }
+  }
+}
+
+.o_testimonial {
+  footer {
+    padding-right: 80px;
+    position: relative;
+    margin-top: 40px;
+    img {
+      width: 64px;
+      height: 64px;
+      display: block;
+      position: absolute;
+      border-radius: 50%;
+      object-fit: contain;
+      top: calc(50% - 32px);
+      right: -8px;
+    }
+  }
+}
+
+#rdscrm-social_proof {
+  padding: ($vr * 10) 0 ($vr * 6);
+}
+.page-template-page-prices-crm #rdscrm-social_proof {
+  display: none;
+}

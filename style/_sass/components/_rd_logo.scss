@@ -1,0 +1,61 @@
+.rd_logo {
+  height: auto;
+  max-width: 30*$vr;
+  margin-top: $vr;
+}
+.rd_station_logo {
+  width: 200px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(img/logos/rd-station.svg);
+  display: inline-block;
+  text-indent: -9999px;
+  overflow: hidden;
+  &.bright {
+    background-image: url(img/logos/rd-station-white.svg);
+  }
+}
+.rd_marketing_logo {
+  width: 320px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(img/logos/rd-station-marketing.svg);
+  display: inline-block;
+  text-indent: -9999px;
+  overflow: hidden;
+  &.bright {
+    background-image: url(img/logos/rd-station-marketing-white.svg);
+  }
+}
+.rd_crm_logo {
+  width: 230px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(img/logos/rd-station_crm.svg);
+  display: inline-block;
+  text-indent: -9999px;
+  overflow: hidden;
+  &.bright {
+    background-image: url(img/logos/rd-station_crm--white.svg);
+  }
+}
+.rd_affiliates_logo {
+  width: 180px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(img/logos/rd-station_affiliates.svg);
+  display: block;
+  text-indent: -9999px;
+  overflow: hidden;
+  &.bright {
+    background-image: url(img/logos/rd-station_affiliates--white.svg);
+  }
+}

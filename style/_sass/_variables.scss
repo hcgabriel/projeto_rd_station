@@ -1,0 +1,48 @@
+// Colors variables
+
+$brand-first: rgba(54,74,101,1);
+$brand-second: rgba(49,162,255,1);
+$brand-third: rgba(65,91,156,1);
+
+$highlight: rgba(244,85,103,1);
+
+$complement-first: rgba(148,99,214,1);
+$complement-second: rgba(6,201,164,1);
+$complement-third: rgba(255,252,156,1);
+
+$gray-first: rgba(244,245,248,1);
+$gray-second: rgba(232,235,241,1);
+$gray-third: rgba(153,160,170,1);
+
+$black: rgba(64,64,64,1);
+$white: rgba(255,255,255,1);
+
+$danger: rgba(215,105,100,1);
+$alert: rgba(245,175,80,1);
+$success: rgba(155,195,180,1);
+
+$new-dark-blue: rgb(21, 50, 93);
+$new-mid-blue: rgba(54,84,159,1);
+$new-light-blue: rgba(39,160,255,1);
+$new-highlight: rgba(244,85,103,1);
+$new-complement-first: rgba(110,50,178,1);
+$new-gray-first: rgba(236,238,243,1);
+$new-gray-second: rgba(211,215,227,1);
+$new-text-black: rgba(30,30,30,1);
+
+//Typography variables
+
+$font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-base: $font-family;
+$font-family-icons: "FontAwesome";
+
+//Theme colors variables
+
+$theme-primary-color: $brand-first;
+$theme-secondary-color: $brand-second;
+$theme-highlights-color: $complement-first;
+
+// Measurement variables
+
+$vr: 8px;
+$hr: $vr;

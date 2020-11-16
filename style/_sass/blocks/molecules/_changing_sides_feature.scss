@@ -1,0 +1,30 @@
+.m {
+  &_changing_sides_feature {
+    margin: 144px 0 184px;
+    @include desktop() {
+      display: flex;
+      align-items: center;
+    }
+    &-image {
+      margin-bottom: 32px;
+      img {
+        max-width: 100%;
+        border: 1px solid #ced3db;
+        border-radius: 4px;
+      }
+      @include desktop() {
+        margin-bottom: 0;
+        @include new_frame("gradient-1");
+        &:before {
+          right: 20px;
+          width: calc(720px - 40px);
+          left: inherit;
+        }
+        &[class*="push"]:before {
+          right: inherit;
+          left: 20px;
+        }
+      }
+    }
+  }
+}

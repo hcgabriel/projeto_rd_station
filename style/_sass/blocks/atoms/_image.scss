@@ -1,0 +1,30 @@
+.a {
+    &_image {
+        max-width: 100%;
+        object-fit: cover;
+        &-center_vertical {
+            height: 100%;
+            margin: 0 auto;
+            display: block;
+            object-fit: contain;
+        }
+        &.-fill_height {
+            height: 100%;
+        }
+        &.-fill_width {
+            width: 100%;
+        }
+        
+    }
+}
+img {
+    &.lazy-image {
+        opacity: 0.1;
+        will-change: opacity;
+        transition: all 0.3s;
+
+        &.loaded {
+            opacity: 1;
+        }
+    }
+}

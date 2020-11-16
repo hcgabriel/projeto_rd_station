@@ -1,0 +1,24 @@
+.o {
+  &_lm_header_form {
+    // Contextual style for child
+    h1 {
+      margin-bottom: 48px;
+      text-align: center;
+      @include desktop() {
+        text-align: left;
+      }
+    }
+    &.-form_overlap_hero {
+      .o_conversion_form {
+        position: relative;
+        @include desktop() {
+          margin-top: -180px;
+        }
+      }
+      .badge_box {
+        max-width: 300px;
+        margin: 100px auto 0;
+      }
+    }
+  }
+}

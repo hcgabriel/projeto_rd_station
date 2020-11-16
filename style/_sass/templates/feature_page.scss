@@ -1,0 +1,356 @@
+.feature_content {
+  position: relative;
+  p.lead:first-child {
+    margin: 64px 0 80px;
+  }
+  &>.picture {
+    height: 24*$vr;
+  }
+  .videoclic {
+    position: absolute;
+    width: 180px;
+    height: 100px;
+    color: $white;
+    text-align: center;
+    text-transform: uppercase;
+    left: calc(50% - 90px);
+    top: 40px;
+    z-index: 1;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(0,0,0,0.3);
+    cursor: pointer;
+    [class*="icon-"] {
+      font-size: 100px;
+      transition: all 0.4s;
+      display: block;
+      text-align: center;
+      width: 100%;
+      line-height: 80%;
+    }
+  }
+  .feature-content-title {
+      margin: 24px 0 32px;
+  }
+  .btn-default, .btn-secondary, .btn-highlight {
+    position: relative;
+    left: calc( 50% - 120px );
+    width: 240px;
+    margin: 0px 0 36px !important;
+    &.btn-secondary {
+      padding-left: 48px;
+    }
+    [class*="icon-"] {
+      font-size: 38px;
+      display: inline;
+      position: absolute;
+      top: 5px;
+      left: 6px;
+    }
+  }
+  &>.box {
+    @include box-color($white);
+    &>.row>[class*="col"] {
+      @include horizontal-padding(0);
+      &>img, &>a>img, img {
+        width: calc(100% + 64px);
+        margin: 16px -32px 32px;
+        height: auto;
+        &.case-about-logo {
+          max-width: 30*$hr;
+        }
+      }
+    }
+  }
+  .testimonial {
+    @include home-testimonial;
+    flex-wrap: wrap;
+    display: flex;
+    position: relative;
+    .box.text-center {
+      @include box-color(transparent);
+      position: relative;
+    }
+    &:before {
+      @include frame(bottom, 5);
+      height: 100%;
+    }
+    &+p {
+      margin-top: 4*$vr;
+    }
+  }
+  .results {
+    width: 100%;
+    display: inline-block;
+  }
+  h2 {
+    @extend .heading_s;
+    @extend .strong;
+    clear: both;
+    margin: 8*$vr auto 4*$vr;
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+  h4 {
+    text-align: center !important;
+  }
+  @include mobile {
+    .testimonial {
+      margin: 4*$vr -4*$hr 0;
+      .picture {
+        width: 100%;
+      }
+      .box.text-center {
+        margin-top: -3*$vr;
+        padding-top: 0;
+        padding-bottom: 2*$vr;
+      }
+    }
+  }
+  @include desktop {
+    top: -60px;
+    &>.picture {
+      @include frame(top, 5);
+      height: 60*$vr;
+    }
+    .videoclic {
+      top: 160px;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    &:after {
+      content: "";
+      width: calc(100% - #{4*$hr});
+      height: 20px;
+      position: absolute;
+      background-color: $white;
+      top: 0;
+      left: 2*$hr;
+    }
+    &>.picture + .box {
+      margin-top: 50*$vr;
+    }
+    &>.box {
+      padding-bottom: 80px;
+      &>.row>[class*="col"] {
+        img {
+          width: auto;
+          max-width: 100%;
+          &.left, &.alignleft {
+            float: left;
+            margin: 0 40px 32px 0;
+          }
+          &.right, &.alignright {
+            float: right;
+            margin: 0 0 32px 40px;
+          }
+          &:not(.cta-img), &:not(.cta-img).case-photo {
+            width: 480px;
+            margin-left: calc(50% - 240px);
+            margin-top: 16px;
+            margin-bottom: 32px;
+            &.left, &.alignleft {
+              margin-left: -240px;
+            }
+            &.right, &.alignright {
+              margin-right: -240px;
+            }
+            &.no-float, &.alignnone {
+              display: block;
+              float: none;
+              height: auto;
+              margin-left: auto;
+              margin-right: auto;
+              max-width: 100%;
+              width: auto;
+            }
+            &.case-about-logo {
+              max-width: 30*$hr;
+              margin-right: 0px;
+            }
+            &.quote-company {
+              height: 10*$hr;
+              width: auto;
+              max-width: 20*$hr;
+              object-fit: contain;
+            }
+          }
+        }
+        .row.flex {
+          align-items: center;
+          margin: 0;
+          h2, h4 {
+            text-align: left !important;
+          }
+          &.left {
+            flex-direction: row;
+          }
+          &.right {
+            flex-direction: row-reverse;
+          }
+          img {
+            &, &.case-photo {
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+    .testimonial {
+      @include vertical-padding(5);
+      width: calc(100%/ 8 * 12);
+      margin: 0 0 5*$vr calc(100% / 8 * -2);
+      &:before {
+        z-index: -1;
+        height: 60%;
+      }
+    }
+    .btn {
+      margin: 0 $hr;
+    }
+  }
+  .row.flex + h2 {
+    margin-top: 48px;
+  }
+  table {
+    margin: 40px 0;
+    thead {
+      font-weight: bold;
+      tr {
+        background-color: $brand-first;
+        color: $white;
+      }
+    }
+    td {
+      padding: 16px;
+    }
+    tr:nth-child(even) {
+      background-color: $gray-first;
+    }
+  }
+}
+
+.related-resources {
+  .related-posts {
+    column-count: 1;
+    li {
+      background-color: $gray-first;
+      padding: 20px;
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      &:before {
+        content: none;
+      }
+      a {
+        color: $black;
+        box-shadow: none;
+        &:hover {
+          color: $brand-second;
+        }
+      }
+    }
+    @include desktop {
+      column-count: 3;
+      column-gap: 16px;
+    }
+  }
+  .related-articles ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 16px;
+    li {
+      align-items: center;
+      display: grid;
+      background-color: $gray-first;
+      padding: 20px;
+      width: 100%;
+      text-align: center;
+      &:before {
+        content: none;
+      }
+      a {
+        color: $black;
+        box-shadow: none;
+        &:hover {
+          color: $brand-second;
+        }
+      }
+    }
+    @include mobile {
+      grid-template-columns: 1fr;
+      grid-column-gap: 0;
+    }
+  }
+  @include mobile {
+    padding-bottom: 32px;
+  }
+}
+
+.feature-related-content {
+  padding-bottom: 0;
+  .container {
+    h1 {
+      @extend .heading_m;
+      font-weight: bold;
+    }
+    &:before {
+      @include frame(bottom, 5);
+      height: 100%;
+    }
+    &>.row.flex {
+      .box {
+        background-color: $white;
+        text-align: center;
+        margin-top: 0;
+        img {
+          max-width: 100%;
+          margin-bottom: 3*$vr;
+        }
+        .quote-company {
+          height: 10*$hr;
+          width: auto;
+          max-width: 20*$hr;
+          object-fit: contain;
+        }
+      }
+      .picture {
+        height: 160px;
+        margin-bottom: 0;
+      }
+    }
+    @include desktop {
+      margin-top: -160px;
+      padding-top: 80px;
+      &:before {
+        height: 50*$vr;
+      }
+      &>.row.flex {
+        margin-top: 5*$vr;
+        margin-bottom: 5*$vr;
+        .box {
+          padding-top: 0;
+          padding-bottom: 0;
+          text-align: left;
+          img {
+            max-width: 80%;
+          }
+        }
+        .picture {
+          height: auto;
+        }
+      }
+    }
+  }
+}
+.feature_article, .feature-related-content {
+  @include desktop {
+    .btn + .btn {
+      margin-left: 24px;
+    }
+  }
+}
+.zem_rp_wrap {
+  display: none;
+}

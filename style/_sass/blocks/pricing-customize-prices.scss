@@ -1,0 +1,177 @@
+.o_customize_prices {
+    padding: 0 16px;
+    h3 {
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+    h4 {
+        font-weight: bold;
+        color: $black;
+        font-size: 14px;
+        margin: 24px 0 0;
+    }
+    h4 + p, .more-contacts-message p {
+        font-size: 12px;
+    }
+    &-calculator {
+        padding: 32px;
+    }
+    &-result {
+        background-color: $brand-third;
+        padding: 32px;
+        h4, p, .o_rdsm_plan-price_line {
+            color: $white;
+        }
+        .btn {
+            @extend .btn-highlight;
+        }
+    }
+    &.-implementation_details {
+        padding: 24px;
+    }
+    .o_rdsm_plan-link {
+        cursor: pointer;
+    }
+    &-select-plan {
+        .btn-group {
+            position: relative;
+            display: inline-block;
+            margin-top: 16px;
+            & > .btn {
+                position: relative;
+                float: left;
+                margin-top: 0;
+                border: 2px solid $brand-third;
+                line-height: 24px;
+                color: $brand-third;
+                background-color: $white;
+                padding: 6px 16px;
+                & > [type=radio] {
+                    visibility: hidden;
+                    position: absolute;
+                }
+                &.active {
+                    color: $white;
+                    background-color: $brand-third;
+                }
+            }
+            .btn + .btn {
+                margin-left: -2px;
+            }
+
+        }
+        @include mobile {
+            display: none;
+        }
+    }
+    &-slider {
+        $height-slider : 3px;
+        .o_rds_pricing_calculator-range_container {
+            padding: 16px;
+            margin: 16px 0 48px;
+        }
+        .o_rds_pricing_calculator-range_minus,
+        .o_rds_pricing_calculator-range_plus {
+            top: calc(50%);
+            transform: translateY(-50%);
+            padding:0;
+        }
+        .o_rds_pricing_calculator-range_minus {
+            left: 0;
+        }
+        .o_rds_pricing_calculator-range_plus {
+            right: 0;
+        }
+        .o_rds_pricing_calculator-range {
+            height:  $height-slider;
+            padding: 0 12px;
+        }
+        .o_rds_pricing_calculator-lead_number {
+            position: absolute;
+            font-size: 13px;
+            line-height: 16px;
+            bottom: -50%;
+            color: $black;
+            &.set {
+                left: 10px;
+                bottom: 32px;
+                font-weight: bold;
+                font-size: 12px;
+                text-align: center;
+                width: 46px;
+            }
+            &.min {
+                left:0;
+            }
+            &.max {
+                right:0;
+            }
+        }
+        /* Descomentar após mudanças
+        @include mobile {
+            .o_rds_pricing_calculator-range_container {
+                margin: 16px 0 8px;
+            }
+            .o_rds_pricing_calculator-range {
+                display: none;
+            }
+            .o_rds_pricing_calculator-lead_number {
+                &.set {
+                    position: relative;
+                    bottom: 0px;
+                    font-size: 24px;
+                    width: 100%;
+                    display: block;
+                    left: 0px;
+                    height: 32px;
+                    line-height: 32px;
+                }
+                &.min, &.max {
+                    display: none;
+                }
+            }
+        }
+        */
+    }
+
+    &-summary {
+        p {
+            font-size: 14px;
+            line-height: 24px;
+            margin: 0;
+        }
+        .plan-chosen {
+            font-size: 22px;
+            font-weight: bold;
+            margin: 16px 0 8px;
+        }
+        .without-contract {
+            display:none;
+        }
+        // PROMO:
+        .promo-top-label,
+        .promo-striketrought-pricetag,
+        .with-promotion,
+        .promotion-asterisk {
+            display: none;
+        }
+        // PROMO END
+        .o_rdsm_plan-price {
+            margin: 40px 0 8px;
+        }
+        .btn {
+           display: block;
+        }
+    }
+    @include mobile {
+        & .o_customize_prices-calculator {
+            padding: 24px 16px 16px;
+        }
+        & .o_customize_prices-result {
+            padding: 8px 16px 24px;
+        }
+        .email-trigger-number, .implementation-message {
+            display: none !important;
+        }
+    }
+}

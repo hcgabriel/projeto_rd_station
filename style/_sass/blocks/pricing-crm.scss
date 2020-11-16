@@ -1,0 +1,794 @@
+.a {
+  &_image {
+    &-center_vertical {
+      height: 100%;
+      margin: 0 auto;
+      display: block;
+      object-fit: contain;
+    }
+  }
+}
+
+.o {
+  &_simple_header {
+    background-color: $brand-first;
+    padding-top: 112px;
+    padding-bottom: 0;
+    h1 {
+      color: $white;
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 40px;
+      margin-bottom: 8px;
+    }
+    p.lead {
+      color: $white;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}
+
+.o {
+  &_rds_pricing_tabs {
+    margin-top: 32px;
+    display: flex;
+    border: 0;
+    &-tab {
+      list-style: none;
+      margin-bottom: 0 !important;
+      &:before {
+        content: none;
+      }
+      a, a:focus {
+        background-color: $brand-first;
+        display: block;
+        box-shadow: 0px 1px 0px $white !important;
+        height: 100%;
+        padding: 16px 0 !important;
+        border-radius: 0 !important;
+        border: 1px solid $white !important;
+        border-bottom: 0 !important;
+        &:hover {
+          background-color: lighten($brand-first, 10%) !important;
+        }
+      }
+      .a_logo {
+        height: 32px;
+        line-height: 32px;
+        margin-bottom: 0;
+      }
+      p {
+        font-size: 13px;
+        line-height: 16px;
+        color: $white;
+        margin: 8px auto 0;
+        max-width: 320px;
+        vertical-align: center;
+        @include mobile() {
+          display: none;
+        }
+      }
+
+      &.active {
+        a {
+          background-color: $white;
+          .-rd_station_marketing-center.-white {
+            background-image: url(img/logos/rd-station-marketing.svg);
+          }
+          .-rd_station_crm-center.-white {
+            background-image: url(img/logos/rd-station_crm.svg);
+          }
+          p {
+            color: $black;
+          }
+          &:hover {
+            background-color: $white !important;
+          }
+        }
+      }
+
+      @include mobile() {
+        a {
+          .a_logo {
+            height: 12px;
+          }
+          .-rd_station_marketing-center.-white {
+            background-image: url(img/logos/rd-station-marketing-white-reduced.svg);
+          }
+          .-rd_station_crm-center.-white {
+            background-image: url(img/logos/rd-station_crm--white-reduced.svg);
+          }
+        }
+        &.active a {
+          .-rd_station_marketing-center.-white {
+            background-image: url(img/logos/rd-station-marketing-reduced.svg);
+          }
+          .-rd_station_crm-center.-white {
+            background-image: url(img/logos/rd-station_crm-reduced.svg);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.o_plan_tabs-tab {
+  margin-bottom: 0;
+  padding: 0;
+  &:before {
+    content: none;
+  }
+}
+
+.o_plan_tabs {
+  li.o_plan_tabs-tab {
+    box-shadow: none;
+    font-size: 14px;
+    line-height: 16px;
+    color: #415B9C;
+    display: block;
+    padding: 8px 4px;
+    border: 2px solid #415B9C;
+    transition: all .4s;
+    &:first-child {
+      border-right: 0;
+      border-radius: 4px 0 0 4px;
+    }
+    &:last-child {
+      border-left: 0;
+      border-radius: 0 4px 4px 0;
+    }
+    &.active {
+      background-color: #415B9C;
+      color: #ffffff;
+    }
+  }
+}
+
+
+.a {
+  &_logo {
+    width: 100%;
+    overflow: hidden;
+    text-indent: -9999px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    &.-rd_station_marketing-center {
+      background-image: url(img/logos/rd-station-marketing.svg);
+      &.-white {
+        background-image: url(img/logos/rd-station-marketing-white.svg);
+      }
+    }
+    &.-rd_station_crm-center {
+      background-image: url(img/logos/rd-station_crm.svg);
+      &.-white {
+        background-image: url(img/logos/rd-station_crm--white.svg);
+      }
+    }
+  }
+}
+
+.o_rds_pricing_marketing, .o_rds_pricing_crm {
+  margin-bottom: 32px;
+  @include desktop(){
+    padding-top: 40px;
+  }
+  h3 {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 32px;
+    font-weight: 700;
+    @include desktop() {
+      font-size: 20px;
+      line-height: 32px;
+      margin-top: 48px;
+    }
+  }
+  hr {
+    border-top: 1px solid $gray-third;
+  }
+}
+.o_rds_pricing_marketing .a_container:before {
+  top: 320px;
+  height: calc(100% - 320px);
+}
+.o_rds_pricing_crm .a_container:before {
+  top: 160px;
+  height: calc(100% - 160px);
+}
+
+.m_currency_select {
+  width: 100%;
+  max-width: 220px;
+  font-size: 12px;
+  height: 32px;
+  color: $brand-third;
+}
+
+.m_contact_select {
+  width: 100%;
+  font-size: 12px;
+  height: 32px;
+  color: $brand-third;
+  @include desktop() {
+    display: none;
+  }
+}
+
+.o_rds_pricing_table>.row {
+    margin: 24px -15px 0;
+    width: calc(100% + 30px);
+}
+
+.o_rds_pricing_table-plan {
+  text-align: center;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  .a_box {
+    padding: 16px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .btn {
+      width: 100%;
+    }
+    hr {
+      width: calc(100% + 32px);
+      margin: 0 0 0 -16px;
+    }
+  }
+  &-title {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 8px;
+    color: $black;
+    padding-top: 80px;
+    background-repeat: no-repeat;
+    background-size: 56px 56px;
+    background-position: center 8px;
+  }
+  &-desc {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 32px;
+  }
+  &-price_stripe {
+    background-color: $brand-third;
+    padding: 8px 16px 16px;
+    margin: 0 -16px 0;
+  }
+  &-pricing {
+    margin-bottom: 0;
+    .small {
+      font-size: 14px;
+      line-height: 24px;
+    }
+    .price {
+      font-size: 40px;
+      line-height: 40px;
+      font-weight: 700;
+    }
+  }
+  & &-pricing {
+    color: $white;
+  }
+  &-feature_list {
+    margin: 0 0 16px;
+    flex-grow: 1;
+    li {
+      font-size: 14px;
+      line-height: 16px;
+      padding: 12px 0;
+      padding-left: 0;
+      margin: 0;
+      position: relative;
+      &:before {
+        content: none;
+      }
+      &:first-child {
+        padding: 12px 0 32px;
+      }
+      &:not(:first-child):not(:last-child):after {
+        content: "";
+        display: block;
+        height: 1px;
+        width: 30%;
+        background-color: rgba(0,0,0,0.08);
+        position: absolute;
+        bottom: -1px;
+        left: calc(35%);
+      }
+    }
+  }
+  &-selector {
+    input {
+      width: 0;
+      height: 0;
+      visibility: hidden;
+    }
+    label {
+      margin: 8px -16px -16px;
+      padding: 16px 0;
+      position: relative;
+      border-top: 1px solid $gray-second;
+      cursor: pointer;
+      display: flex;
+      width: calc(100% + 32px);
+      max-width: inherit;
+      justify-content: center;
+      &:before {
+        content: " ";
+        display: inline-block;
+        position: relative;
+        width: 18px;
+        height: 18px;
+        background-color: $gray-first;
+        margin: 0px 12px -4px 0;
+        border-radius: 9px;
+        border: 1px solid $gray-second;
+        order: 0;
+      }
+      &:after {
+        content: " ";
+        display: inline-block;
+        position: relative;
+        width: 16px;
+        height: 10px;
+        border-left: 4px solid $brand-second;
+        border-bottom: 4px solid $brand-second;
+        top: calc(50% - 8px);
+        transform: rotate(-45deg) translateX(13px) translateY(15px);
+        order: -1;
+        margin-left: -12px;
+        visibility: hidden;
+        z-index: 1;
+      }
+      .text-checked {
+        display: none;
+      }
+      .text-unchecked {
+        display: block;
+      }
+      &.active {
+        &:after {
+          visibility: visible;
+        }
+        .text-checked {
+          display: block;
+        }
+        .text-unchecked {
+          display: none;
+        }
+      }
+    }
+    @include mobile() {
+      display: none;
+    }
+  }
+  &-featured {
+    color: $white;
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: -17px -16px 0px !important;
+    padding: 4px 0;
+    background-color: $brand-third;
+  }
+
+  &.-mkt_basic {
+    .o_rds_pricing_table-plan-title {
+      background-image: url(img/icons/pricing-page/helicopter.svg);
+    }
+    .o_rds_pricing_table-plan-price_stripe {
+      background-color: $highlight;
+    }
+  }
+  &.-mkt_pro {
+    .o_rds_pricing_table-plan-title {
+      margin-top: 16px !important;
+      background-image: url(img/icons/pricing-page/plane.svg);
+    }
+    .o_rds_pricing_table-plan-price_stripe {
+      background-color: $brand-third;
+    }
+  }
+  &.-mkt_enterprise {
+    .o_rds_pricing_table-plan-title {
+      background-image: url(img/icons/pricing-page/rocket.svg);
+    }
+    .o_rds_pricing_table-plan-price_stripe {
+      background-color: $brand-first;
+    }
+  }
+  &.-crm_free {
+    padding-top: 32px;
+    .o_rds_pricing_table-plan-title {
+      background-image: url(img/icons/pricing-page/boat.svg);
+    }
+    .o_rds_pricing_table-plan-price_stripe {
+      background-color: $brand-third;
+    }
+    &.-featured {
+      .o_rds_pricing_table-plan-title, .o_rds_pricing_table-plan-desc, .o_rds_pricing_table-plan-feature_list li, .o_rds_pricing_table-plan-selector label {
+        color: $white;
+      }
+      .a_box {
+        background-color: $brand-third;
+      }
+      .o_rds_pricing_table-plan-title {
+        background-image: url(img/icons/pricing-page/boat-white.svg);
+      }
+    }
+  }
+  &.-crm_basic {
+    padding-top: 32px;
+    .o_rds_pricing_table-plan-title {
+      background-image: url(img/icons/pricing-page/ship.svg);
+    }
+    .o_rds_pricing_table-plan-price_stripe {
+      background-color: $white;
+      .o_rds_pricing_table-plan-pricing {
+        color: $black;
+        .price-line {
+          color: $brand-third;
+        }
+      }
+    }
+  }
+
+  @include desktop() {
+    &.-mkt_basic, &.-mkt_enterprise {
+      padding-top: 40px;
+    }
+    &.active {
+      &.-mkt_basic {
+        .a_box {
+          background-color: $highlight;
+          box-shadow: 0 0 12px rgba($gray-third, 0.35);
+        }
+        .o_rds_pricing_table-plan-title {
+          background-image: url(img/icons/pricing-page/helicopter-white.svg);
+        }
+        .o_rds_pricing_table-plan-title, .o_rds_pricing_table-plan-desc, .o_rds_pricing_table-plan-feature_list li, .o_rds_pricing_table-plan-selector label {
+          color: $white;
+        }
+      }
+      &.-mkt_pro {
+        .a_box {
+          background-color: $brand-third;
+          box-shadow: 0 0 12px rgba($gray-third, 0.35);
+        }
+        .o_rds_pricing_table-plan-title {
+          background-image: url(img/icons/pricing-page/plane-white.svg);
+        }
+        .o_rds_pricing_table-plan-title, .o_rds_pricing_table-plan-desc, .o_rds_pricing_table-plan-feature_list li, .o_rds_pricing_table-plan-selector label {
+          color: $white;
+        }
+      }
+      &.-mkt_enterprise {
+        .a_box {
+          background-color: $brand-first;
+          box-shadow: 0 0 12px rgba($gray-third, 0.35);
+        }
+        .o_rds_pricing_table-plan-title {
+          background-image: url(img/icons/pricing-page/rocket-white.svg);
+        }
+        .o_rds_pricing_table-plan-title, .o_rds_pricing_table-plan-desc, .o_rds_pricing_table-plan-feature_list li, .o_rds_pricing_table-plan-selector label {
+          color: $white;
+        }
+      }
+    }
+  } // desktop
+
+  @include mobile() {
+    &.-mkt_pro {
+      .a_box {
+        background-color: $brand-third;
+      }
+      .o_rds_pricing_table-plan-title {
+        background-image: url(img/icons/pricing-page/plane-white.svg);
+      }
+      .o_rds_pricing_table-plan-title, .o_rds_pricing_table-plan-desc, .o_rds_pricing_table-plan-feature_list li, .o_rds_pricing_table-plan-selector label {
+        color: $white;
+      }
+    }
+  } // mobile
+  
+
+}
+
+.o_rds_pricing_calculator {
+  &-range_container {
+    position: relative;
+    margin-bottom: 24px;
+  }
+  .a_box {
+    padding: 16px;
+  }
+  &-range {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 2px;
+    background: $brand-third;
+    outline: none;
+    padding: 0 28px;
+    margin: 24px 0;
+    &::-moz-range-track {
+      background: $brand-third;
+      height: 1px;
+    }
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 12px;
+      height: 12px;
+      border: 0;
+      border-radius: 50%;
+      background: $white;
+      cursor: pointer;
+      transition: all .15s ease-in-out;
+      box-shadow: 0 0 0 2px $brand-third;
+    }
+    &::-moz-range-thumb {
+      width: 12px;
+      height: 12px;
+      border: 0;
+      border-radius: 50%;
+      background: $white;
+      cursor: pointer;
+      transition: all .15s ease-in-out;
+      box-shadow: 0 0 0 2px $brand-third;
+    }
+    &:focus {
+      &::-webkit-slider-thumb {
+        box-shadow: 0 0 0 3px $brand-third;
+      }
+    }
+  }
+  &-range_minus, &-range_plus {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 23px;
+    max-width: 23px;
+    height: 23px;
+    max-height: 23px;
+    overflow: hidden;
+    text-indent: -9999px;
+    background: $brand-third;
+    border: 0;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    transition: all .15s ease-in-out;
+    cursor: pointer;
+    &:focus {
+      box-shadow: 0 0 0 1px $brand-third;
+      outline: none;
+    }
+    &:after, &:before {
+      position: absolute;
+      display: block;
+    }
+  }
+  &-range_minus {
+    left: 16px;
+    bottom: 30px;
+    top: inherit;
+    &:after {
+      content: "";
+      width: 9px;
+      height: 3px;
+      background-color: white;
+      top: 10px;
+      left: 7px;
+    }
+  }
+  &-range_plus {
+    right: 16px;
+    bottom: 30px;
+    top: inherit;
+    &:after {
+      content: "";
+      width: 9px;
+      height: 3px;
+      background-color: white;
+      top: 10px;
+      left: 7px;
+    }
+    &:before {
+      content: "";
+      width: 3px;
+      height: 9px;
+      background-color: white;
+      top: 7px;
+      left: 10px;
+    }
+  }
+  &-lead_number {
+    color: $brand-third;
+  }
+}
+
+.m_pricing_checkbox {
+  margin: 8px 0 0;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: left;
+  input {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+  label {
+    margin-bottom: 0;
+    font-weight: 400;
+    cursor: pointer;
+  }
+  a {
+    text-decoration: underline;
+  }
+  &:before {
+    content: " ";
+    display: inline-block;
+    position: relative;
+    min-width: 18px;
+    min-height: 18px;
+    width: 18px;
+    height: 18px;
+    background-color: $gray-first;
+    margin: 3px 12px -4px 0;
+    border-radius: 9px;
+    border: 1px solid $gray-second;
+    order: 0;
+  }
+  &:after {
+    content: " ";
+    display: inline-block;
+    position: relative;
+    min-width: 16px;
+    min-height: 10px;
+    width: 16px;
+    height: 10px;
+    border-left: 4px solid $brand-second;
+    border-bottom: 4px solid $brand-second;
+    top: calc(50% - 8px);
+    transform: rotate(-45deg) translateX(12px) translateY(17px);
+    order: -1;
+    margin-left: -12px;
+    visibility: hidden;
+    z-index: 1;
+  }
+  &.active {
+    background-color: $brand-third;
+    label, label a {
+      color: $white;
+    }
+    &:after {
+      visibility: visible;
+    }
+  }
+}
+
+.o_rds_pricing_result {
+  .j_chosen_plan, .j_crm_opt, .j_chosen_contacts {
+    font-weight: 700;
+  }
+  .price {
+    color: $brand-third;
+  }
+  .o_rds_pricing_table-plan-pricing {
+    margin-bottom: 24px;
+  }
+  .btn {
+    margin-bottom: 16px;
+    width: 100%;
+  }
+}
+
+.o_rds_pricing_featured_section {
+  margin-bottom: 32px;
+  h2 {
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 700;
+  }
+  p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  a:not(.btn) {
+    text-decoration: underline;
+    display: inline;
+    box-shadow: none;
+  }
+  &-logos {
+    margin: 40px 0;
+  }
+  .a_logo {
+    display: block;
+    height: 28px;
+    margin: 16px auto;
+  }
+}
+
+.o_faq {
+  margin-bottom: 20px;
+  h3 {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    @include desktop() {
+      font-size: 20px;
+      line-height: 32px;
+    }
+  }
+  h4 {
+    font-weight: 700;
+  }
+  #faq {
+    column-gap: 40px;
+  }
+  .faq-questions {
+    margin-bottom: 40px;
+  }
+  p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+.o_conversion_modal {
+  width: 100%;
+  max-width: 480px;
+  margin: 40px auto 80px;
+  h1 {  
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+  }
+  p.lead {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  label {
+    font-size: 13px;
+    line-height: 24px;
+    margin: 0 0 4px !important;
+  }
+  input[type="text"], input[type="email"], input[type="url"], textarea, select {
+    padding: 8px 8px 8px;
+    font-size: 13px;
+    line-height: 24px;
+  }
+  .control-group>input:not(:focus):valid, .control-group textarea:not(:focus):valid, .control-group select:not(:focus):valid, #first_step>input:not(:focus):valid, #first_step textarea:not(:focus):valid, #first_step select:not(:focus):valid,
+  .control-group>input.outed:not(:focus):invalid, .control-group textarea.outed:not(:focus):invalid, .control-group select.outed:not(:focus):invalid, #first_step>input.outed:not(:focus):invalid, #first_step textarea.outed:not(:focus):invalid, #first_step select.outed:not(:focus):invalid {
+    background-position: 10px 10px;
+  }
+  .control-group>input.outed:not(:focus):invalid ~ .valError, 
+  .control-group textarea.outed:not(:focus):invalid ~ .valError, 
+  .control-group select.outed:not(:focus):invalid ~ .valError, 
+  #first_step>input.outed:not(:focus):invalid ~ .valError, 
+  #first_step textarea.outed:not(:focus):invalid ~ .valError, 
+  #first_step select.outed:not(:focus):invalid ~ .valError {
+    font-size: 13px;
+    padding: 4px 0;
+    text-align: right;
+  }
+  .btn-highlight {
+    margin-top: 16px;
+    width: 100%;
+  }
+}
+
+#comparingPlansModal .modal-body {
+  overflow-x: scroll;
+  margin: 0 1px;
+  & > .row > table {
+    border-right: 24px solid #fff;
+  }
+}

@@ -1,0 +1,306 @@
+#home-hero_header-legacy {
+  padding: ($vr * 5) 0 0;
+  background-image: url(img/home-hero-platform-bg.svg), -webkit-linear-gradient(95deg, #354966 22%, #9463D6 100%);
+  background-image: url(img/home-hero-platform-bg.svg), -o-linear-gradient(95deg, #354966 22%, #9463D6 100%);
+  background-image: url(img/home-hero-platform-bg.svg), linear-gradient(185deg, #354966 22%, #9463D6 100%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: top right;
+  .rdsm-banner {
+    background: $white;
+    border-top: 8px solid $brand-second;
+    box-shadow: 0 20px 20px 0 rgba($brand-first, .4);
+    margin: 36px 15px 24px;
+    padding: 20px;
+    position: relative;
+    .featured-banner-tag {
+      background-color: $brand-second;
+      display: block;
+      position: absolute;
+      color: $white;
+      z-index: 1;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 4px 12px;
+      top: -8px;
+      left: 0px;
+    }
+    h3{
+      font-size: 28px;
+      line-height: 40px;
+      font-weight: 700;
+    }
+    .rd_marketing_logo {
+      margin-bottom: 0;
+      background-position: left center;
+      width: 100%;
+      max-width: 320px;
+    }
+  	@include desktop {
+      background: #fff url(img/ilustracao-rdsm.svg) no-repeat 40px -10px;
+      background-size: 500px 500px;
+      box-shadow: 0 40px 40px 0 rgba($brand-first, .8);
+      margin: 0 0 5rem 0;
+      padding: 5rem 30px;
+      h3 {
+        margin-top: 16px;
+      }
+  	}
+  }
+
+  @include desktop {
+    padding: ($vr * 15) 0 ($vr * 40);
+    .container:before {
+      content: "";
+      width: 700px;
+      height: 700px;
+      background-image: url(img/home-hero-platform.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      position: absolute;
+      display: block;
+      left: 50%;
+      bottom: -160px;
+    }
+  }
+  @include mobile {
+    background-image: url(img/home-hero-platform-bg-mobile.svg), -webkit-linear-gradient(95deg, #354966 22%, #9463D6 100%);
+    background-image: url(img/home-hero-platform-bg-mobile.svg), -o-linear-gradient(95deg, #354966 22%, #9463D6 100%);
+    background-image: url(img/home-hero-platform-bg-mobile.svg), linear-gradient(185deg, #354966 22%, #9463D6 100%);
+    h1 {
+      font-size: 32px;
+    }
+    .rd_station_logo {
+      display: none;
+    }
+  }
+  &.b-version {
+    @include desktop {
+      padding: ($vr * 15) 0;
+      .btn {
+        width: 280px;
+      }
+    }
+  }
+}
+#home-rd_marketing-legacy {
+  .row + .row {
+    margin-top: 80px;
+  }
+  .video_thumbnail {
+    padding: 0 32px 0 0;
+    overflow: hidden;
+    position: relative;
+    img {
+      width: 100%;
+    }
+    .btn-video {
+      width: calc(100% - 32px);
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      text-align: center;
+      height: 100%;
+      color: white;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+      padding: calc(25% - 69px) 0;
+      margin-top: 0;
+      display: block;
+      cursor: pointer;
+      &:hover, &:focus, &:active {
+        text-decoration: none;
+      }
+      span {
+        font-size: 100px;
+      }
+    }
+  }
+  .box:before {
+    z-index: 0;
+  }
+  p {
+    max-width: 800px;
+    display: inline-block;
+  }
+  a:not(.btn) {
+    display: block;
+    margin-top: 16px;
+  }
+  .rd_marketing_logo {
+    margin-top: 32px;
+  }
+  .marketing_advantages {
+    text-align: center;
+    [class*="col"] {
+      padding: 0 32px;
+      h3 {
+        font-size: 18px;
+        line-height: 24px;
+        margin-top: 8px;
+      }
+      img {
+        width: 180px;
+      }
+    }
+  }
+  .row.phone_message {
+    position: relative;
+    margin-top: -16px;
+    [class*='icon-'] {
+      font-size: 48px;
+      display: block;
+      margin-bottom: 16px;
+    }
+    a {
+      display: inline-block;
+      margin-top: 0;
+    }
+    @include desktop {
+      margin-top: 40px;
+      @include new_frame;
+      [class*='icon-'] {
+        font-size: 48px;
+        display: inline-block;
+        top: 12px;
+        position: relative;
+        margin-bottom: 0;
+        margin-right: 8px;
+      }
+      &:before {
+        height: calc(100% + 204px);
+        margin-top: -204px;
+      }
+    }
+  }
+  .partnership_boxes {
+    position: relative;
+    @include new_frame;
+    &:before {
+      height: 100%;
+    }
+  }
+  @include desktop {
+    margin-top: -300px;
+  }
+  .integration_cta {
+    padding-top: 64px;
+  }
+  @include mobile {
+    .marketing_intro .box {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    .rd_marketing_logo {
+      max-width: 100%;
+    }
+    .video_thumbnail {
+      padding: 0;
+      margin: 32px -16px;
+      .btn-video {
+        width: 100%;
+        padding: calc(25% - 50px) 0;
+        span {
+          font-size: 80px;
+        }
+      }
+    }
+    .partnership_boxes .box .box {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  &.b-version {
+    h2 {
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+    .btn-video {
+      padding: calc(25% - 38px) calc(50% - 64px);
+    }
+    @include desktop {
+      margin-top: 0px;
+    }
+  }
+}
+#home-rd_marketing-2-legacy.b-version {
+  p {
+    max-width: 800px;
+    display: inline-block;
+  }
+  a:not(.btn) {
+    display: block;
+    margin-top: 16px;
+  }
+  .partnership_boxes {
+    position: relative;
+    @include new_frame;
+    &:before {
+      height: 100%;
+    }
+  }
+  @include mobile {
+    .partnership_boxes .box .box {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+#home-social_proof {
+  .results {
+    position: relative;
+    @include new_frame;
+    &:before {
+      height: calc(100% + 80px);
+    }
+    [class*="col"] [class*="col"] {
+      padding: 60px 0;
+    }
+    .result-description {
+      margin-bottom: 0;
+    }
+    .result-number {
+      margin-top: 0;
+    }
+  }
+  &.b-version {
+    .results:before {
+      top: -256px;
+    }
+  }
+}
+#rdsm-social_proof {
+  &.b-version {
+    .video_thumbnail .btn-video {
+      padding: calc(25% - 12px) calc(50% - 0px);
+    }
+  }
+}
+.b-version #home-publication-quotes-legacy {
+  &:before {
+    top: -120px;
+  }
+}
+
+.b-version {
+  .video_thumbnail {
+    .btn-video {
+      padding: calc(25% - 48px) calc(50% - 64px);
+      .st2 {
+        transition: all .2s;
+      }
+      &:hover, &:focus, &:active {
+        .st2 {
+          fill: #ff0000;
+          opacity: 1;
+        }
+      }
+      @include mobile {
+        padding: calc(25% - 36px) calc(50% - 48px) !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,89 @@
+.error404 {
+
+  .o_simple_header {
+    padding-bottom: 160px !important;
+    .btn {
+      margin: 0px 8px;
+      @include mobile() {
+        margin: 0px;
+        & + .btn {
+          margin-top: 16px;
+        }
+      }
+    }
+  }
+  
+  h2,
+  h3 {
+    margin-bottom: 64px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+  }
+  
+  .error_404-products {
+    .container {
+      margin-top: -96px;
+      padding-top: 40px;
+      z-index: 2;
+      @include new_frame();
+      &:before {
+        top: 0;
+        height: 100%;
+        background-color: #fff;
+      }
+    }
+    .rd_crm_logo,
+    .rd_marketing_logo {
+      height: 32px;
+      display: block;
+      margin: auto;
+      @include mobile() {
+        width: 280px; 
+      }
+    }
+    .col-md-4 {
+      display: flex;
+      flex-direction: column;
+      @include mobile() {
+        margin-bottom: 80px; 
+      }
+    }
+    .flex{
+      justify-content: center;
+    }
+    h3 { 
+      margin-bottom: 0px; 
+    }
+    p {
+      flex-grow: 1;
+      margin-top: 24px;
+    }
+  }
+  
+  .error_404-sitemap {
+    margin-top: 32px;
+    ul li {
+      padding-left: 0px;
+      a {
+        color: $black;
+        text-decoration: none;
+        box-shadow: none;
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+          outline: none;
+        }
+      }
+      &:before {
+        display: none;
+      }
+    }
+    .sub-menu {
+      margin-bottom: 32px;
+    }
+  }
+
+  
+
+}

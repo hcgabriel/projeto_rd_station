@@ -1,0 +1,32 @@
+.o {
+  &_ceo_testimonial {
+    @include desktop() {
+      display: flex;
+    }
+    &-image {
+      position: relative;
+      &:after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-image: -webkit-linear-gradient(rgba(148,99,214,0) 60%, rgba(148,99,214,0.65) 120%);
+        background-image: -o-linear-gradient(rgba(148,99,214,0) 60%, rgba(148,99,214,0.65) 120%);
+        background-image: linear-gradient(rgba(148,99,214,0) 60%, rgba(148,99,214,0.65) 120%);
+      }
+      img {
+        width: calc(100% + 30px);
+        margin: 0 -15px;
+        height: 160px;
+        object-fit: cover;
+        object-position: center center;
+        @include desktop() {
+          height: 100%;
+        }
+      }
+    }
+  }
+}

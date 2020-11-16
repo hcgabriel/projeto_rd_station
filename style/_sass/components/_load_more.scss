@@ -1,0 +1,29 @@
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.load_more {
+  margin-bottom: 8*$vr;
+  transition: width .4s;
+  .spinner {
+    border-radius: 50%;
+    width: 2*$hr;
+    height: 2*$vr;
+    border: 2px solid transparent;
+    border-top-color: $brand-third;
+    border-left-color: $brand-third;
+    animation: spin 1s infinite linear;
+    float: left;
+    margin-right: $hr;
+    margin-top: $vr/2;
+    display: none;
+  }
+  &.loading .spinner {
+    display: block;
+  }
+}

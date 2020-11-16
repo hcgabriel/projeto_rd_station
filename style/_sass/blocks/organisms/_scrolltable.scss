@@ -1,0 +1,11 @@
+@media screen and (max-width: 519.9px){
+    .scrolltable-container {
+        overflow-x: scroll;
+        margin: 0 -32px;
+        padding: 0 32px;
+        table {
+            width: 600px;
+            border-right: 32px solid $white;
+        }
+    }
+}

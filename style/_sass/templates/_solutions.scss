@@ -1,0 +1,89 @@
+#solutions-header {
+  h1 {
+    font-size: 32px;
+    line-height: 5*$vr;
+    margin-top: 24px;
+  }
+  p {
+    margin-top: 2*$vr;
+  }
+  @include mobile {
+    &, h1, p, .btn {
+      text-align: center;
+    }
+    [class*="col-"] {
+      img {
+        margin: 3*$vr -48px 0;
+      }
+    }
+  }
+}
+
+#solutions-benefits {
+  padding: 100px 0;
+  h2 {
+    font-weight: bold;
+    margin-bottom: 24px;
+    position: relative;
+    i {
+      font-size: 12px;
+      top: -14px;
+      position: relative;
+    }
+  }
+}
+
+#solutions-social_proof {
+  padding: 40px 0;
+  .container {
+    @include new_frame;
+  }
+}
+
+#solutions-numbers {
+  .container {
+    @include new_frame;
+    &:before {
+      height: 100%;
+    }
+  }
+  h2 {
+    font-weight: bold;
+  }
+  p, h2 {
+    max-width: 800px;
+    display: inline-block;
+  }
+  .result-description {
+    margin-bottom: 0px;
+  }
+  .result-number {
+    margin-top: 0px;
+  }
+  @include mobile {
+    [class*="col"] [class*="col"] {
+      margin: 12px 0;
+    }
+  }
+}
+
+#solutions-investors {
+  padding-bottom: 64px;
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+}
+
+#solutions-links {
+  .container {
+    @include new_frame;
+    &:before {
+      height: 100%;
+    }
+  }
+  img {
+    width: 240px;
+    margin: 24px 0;
+  }
+}

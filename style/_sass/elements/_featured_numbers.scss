@@ -1,0 +1,39 @@
+// Will style big numbers to show important numeric information
+
+// Mixin:
+// Don't edit it. Call it like this inside your class:
+// @include featured_numbers($background:'yes|no', $align: 'center|left|right');
+// or use the .featured_numbers class for default behavior.
+@mixin featured_numbers($background:'yes', $align: center) {
+  @if $background == 'yes' {
+    .container:before {
+      @include frame(top, -5);
+      height: calc(100% + #{25*$vr});
+    }
+  }
+  [class*="col-"] {
+    padding-top: 2*$vr;
+    text-align: $align;
+    .result-number {
+      color: $brand-third;
+      display: inline-block;
+      font-family: $font-family-base;
+      font-size: 5*$vr;
+      font-weight: 700;
+      line-height: 6*$vr;
+      margin-bottom: 0;
+    }
+    .result-description {
+      font-size: 1.5*$vr;
+      text-transform: uppercase;
+      font-weight: 700;
+      display: inline-block;
+    }
+  }
+}
+
+// Class
+// Don't edit it. Use it when you want the default behavior in an HTML section.
+.featured_numbers {
+  @include featured_numbers();
+}

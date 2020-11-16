@@ -1,0 +1,20 @@
+.m {
+  &_partner_logo {
+    margin:{
+      bottom: 40px;
+      top: 40px;
+    }
+    &-image {
+      width: 100%;
+      height: 64px;
+      object-fit: contain;
+      object-position: center center;
+    }
+    &.-small {
+      text-align: center;
+      .m_partner_logo-image {
+        width: 75%;
+      }
+    }
+  }
+}

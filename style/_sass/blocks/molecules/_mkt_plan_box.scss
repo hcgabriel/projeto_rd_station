@@ -1,0 +1,43 @@
+.m {
+    &_mkt_plan_box {
+      &-plan_desc {
+        font-size: 13px;
+        line-height: 16px;
+        max-width: 200px;
+        margin: 0 auto 8px;
+      }
+      &-price {
+        font-size: 13px;
+        line-height: 24px;
+      }
+      &-price_line {
+        color: $brand-third;
+        display: block;
+        font-weight: bold;
+        font-size: 16px;
+        height: 32px;
+        line-height: 32px;
+        margin: 8px 0;
+        text-transform: none;
+      }
+      &-currency {
+        font-size: 32px;
+      }
+      &-value {
+        font-size: 32px;
+      }
+      &-feature_list {
+        text-align: left;
+        margin-bottom: 0;
+        li {
+          font-size: 13px;
+        }
+      }
+      &-feature_etc {
+        font-size: 13px;
+        text-align: left;
+        padding-left: 24px;
+        padding-bottom: 8px;
+      }
+    }
+  }

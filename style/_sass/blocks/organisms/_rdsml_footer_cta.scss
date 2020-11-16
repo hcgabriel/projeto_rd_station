@@ -1,0 +1,38 @@
+.o {
+  &_rdsml_footer_cta {
+    padding-bottom: 128px;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 26%;
+      height: 100%;
+      bottom: 0;
+      left: 0;
+      background-image: url(img/rdsml/rdsml-footer-l.svg);
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      background-size: contain;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      width: 26%;
+      height: 100%;
+      bottom: 0;
+      right: 0;
+      background-image: url(img/rdsml/rdsml-footer-r.svg);
+      background-repeat: no-repeat;
+      background-position: left bottom;
+      background-size: contain;
+    }
+    @media screen and (max-width: 991.9px) {
+      padding-bottom: 320px;
+      &:before, &:after {
+        background-size: cover;
+        height: 320px;
+        width: 50%;
+      }
+    }
+  }
+}
